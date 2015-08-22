@@ -7,5 +7,8 @@ var config = require('./config'),
 module.exports = function() {
     var db = mongoose.connect(config.db);
     require('../models/user.server.model');
+    require('../models/artifact.server.model');
+    require('../models/asset.server.model');
+    require('../models/activity.server.model');
     return db;
 }

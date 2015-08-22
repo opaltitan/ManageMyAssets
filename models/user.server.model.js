@@ -1,9 +1,6 @@
 /**
  * Created by Justin on 8/21/2015.
  */
-/**
- * Created by Justin on 7/24/2015.
- */
 var mongoose = require('mongoose'),
     crypto = require('crypto'),
     schema = mongoose.Schema;
