@@ -4,10 +4,11 @@ $textBoxBackgroundColor = #777777
 $backgroundColor_Hover = #666666
 
 body {
-  padding: 50px;
+  padding: 2%;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: $backgroundColor;
 }
+
 
 a {
   color: #00B7FF;
@@ -28,6 +29,52 @@ span, p, label, h2, h1, h3 {
   color: $baseColor;
 }
 
+div.asset_list {
+  display: inline;
+  float: left;
+  width: 30%;
+  margin-right: 30px;
+}
+
+div.total_input {
+    display: block;
+    padding-top:3px;
+    padding-bottom:3px;
+}
+
+.input_inline, div.input_inline, input.input_inline {
+  diplay: inline;
+  float:none;
+}
+.label_inline {
+  display: inline-block;
+  float:left;
+  min-width:175px;
+}
+
+.asset_list_sub, .asset_list {
+  padding-left:0px;
+}
+/*
+div.asset_list > div.asset_list_sub {
+  width: 40%;
+  display: block;
+  margin-right: 0px;
+}
+
+
+
+div.asset_list > div.asset_list_sub > ul, div.asset_list > div.asset_list_sub > ul > li {
+  display: block;
+  margin-right: 0px;
+}
+*/
+.asset_create {
+  display: inline;
+  float: left;
+  width: 50%;
+}
+
 input {
   background-color: $textBoxBackgroundColor;
   color: inherit;
@@ -38,21 +85,56 @@ ul {
   text-indent: 0px;
   list-style-position: none;
   padding-left: 0px;
-  max-width: 50%;
-  margin-right: 50%;
+  //width: 100%;
+  //margin-right: 50%;
 }
+
+ul.header {
+  //height: 100px;
+  text-align: center;
+  background-color: #444444;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  //margin-left: 10%;
+  //margin-right: 10%;
+  width: 100%;
+}
+
+ul.header li {
+  display: inline;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  //padding-bottom: 30px;
+  float: none;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+}
+
+ul.header > a > li {
+  font: 22px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #66d69e;
+}
+
 .label {
   color: #999999;
 }
 .field {
   color: #00d6b2;
 }
-ul > li {
-  padding-left: 10px;
-  padding-bottom: 10px;
-  padding-top: 10px;
+
+div.asset_list_sub > ul > li.assets > a > div > small.list_item {
+    min-width: 150px;
+    display: inline-block;
 }
-ul > li:hover {
+
+ul > li {
+  padding-left: 0px;
+  //padding-bottom: 10px;
+  //padding-top: 10px;
+}
+ul li:hover {
   background-color: $backgroundColor_Hover;
 }
 
@@ -90,40 +172,15 @@ ul > li > .room_edit {
   display: inline-block;
   vertical-align: middle;
 }
-
-.room_info.ng-enter {
-  animation: 0.35s target-enter;
+  
+.assets.ng-enter {
+  animation: 0.35s item-enter;
 }
-.room_info.ng-leave {
-  animation: 0.2s target-leave;
+.assets.ng-leave {
+  animation: 0.35s item-leave;
 }
-
-@keyframes target-enter {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes target-leave {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-.rooms_list.ng-enter {
-  animation: 1.5s item-enter;
-}
-.rooms_list.ng-leave {
-  animation: 1.5s item-leave;
-}
-.rooms_list.ng-move {
-  animation: 1.5s item-move;
+.assets.ng-move {
+  animation: 0.35s item-move;
 }
 
 @keyframes item-enter {

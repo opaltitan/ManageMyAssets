@@ -1,0 +1,24 @@
+<!--<div data-ng-controller="PropertyController">-->
+<div class="asset_list">
+    <h1>Property List</h1>
+    <a ui-sref="app.asset.create">New Property</a>
+    <div class="asset_list_sub">
+        <label for="search.propertyTypeCode">Asset Type</label>
+        <input type="text" id="search.propertyTypeCode" ng-model="search.propertyTypeCode"/>
+    </div>
+    <div data-ng-init="find()" class="asset_list_sub">
+        <ul>
+            <li data-ng-repeat="property in properties | filter : search" class="assets">
+                <a ui-sref="app.asset.details({ propertyId: property._id })">
+                    <div>
+                        <small data-ng-bind="property.propertyName" class="list_item"></small>
+                        <small data-ng-bind="property.propertyTypeCode" class="list_item"></small>
+                        <small data-ng-bind="property.propertyAddressState" class="list_item"></small>
+ <!--                   <small data-ng-bind="property.created"></small>-->
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div ui-view="details"></div>

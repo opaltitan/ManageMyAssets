@@ -11,11 +11,12 @@
         <a href="/signin">Sign in</a>
     </div>
     <div data-ng-show="authentication.user">
-        <h1>Hello <span data-ng-bind="authentication.user.firstName"></span></h1>
-        <ul>
+        <h1>Welcome <span data-ng-bind="authentication.user.firstName"></span></h1><a href="/signout">Sign out</a>
+        <!--<div ui-view="header"></div>-->
+
+        <!--<ul>
             <li><a href="/#!/assets">Assets</a></li>
-        </ul>
-        <a href="/signout">Sign out</a>
+        </ul>-->
     </div>
 </section>
 </body>

@@ -2,7 +2,8 @@
  * Created by Justin on 8/21/2015.
  */
 
-var Asset = require('mongoose').model('Asset');
+var Asset = require('mongoose').model('Asset'),
+    Property = require('mongoose').model('Property');
 
 var getErrorMessage = function(err){
     var message = '';
@@ -27,17 +28,22 @@ module.exports = function(io, socket) {
     socket.on('connect', function(data){
         //data.username = socket.request.user.username;
         //response.assets = Asset.find();
-        Asset.find()
-            .exec(function(err, assets){
+        Property.find()
+            .exec(function(err, properties){
                 if(err){
                     return data.status(400).send({
                         message: getErrorMessage(err)
                     });
                 } else {
-                    data.json(assets);
+                    data.json(properties);
                 }
             });
 
         io.to(socket.id).emit('connect', data);
+    });
+    socket.on('asset_addition', function(propertyId){
+        io.emit('asset_addition', {
+            propertyId: propertyId
+        });
     });
 };

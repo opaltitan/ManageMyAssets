@@ -10,5 +10,6 @@ module.exports = function() {
     require('../models/artifact.server.model');
     require('../models/asset.server.model');
     require('../models/activity.server.model');
+    require('../models/assets/property.server.model');
     return db;
 }

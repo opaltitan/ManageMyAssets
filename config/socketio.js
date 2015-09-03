@@ -34,14 +34,14 @@ module.exports = function(server, io, mongoStore){
     assetNamespace.on('connection', function(socket){
         require('../socketio/asset.server.socketio.js')(assetNamespace, socket);
     });
-    var activityNamespace = io.of('/activity');
+    /*var activityNamespace = io.of('/activity');
     activityNamespace.on('connection', function(socket) {
         require('../controllers/activity.server.controller')(activityNamespace, socket);
     });
     var reportingNamespace = io.of('/reporting');
     reportingNamespace.on('connection', function(socket) {
         require('../controllers/reporting.server.controller')(reportingNamespace, socket);
-    });
+    });*/
 
     //io.on('connection', function(socket){
     //    require('../controllers/chat.server.controller')(io, socket);

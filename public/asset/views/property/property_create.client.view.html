@@ -1,0 +1,55 @@
+<div data-ng-controller="PropertyController">
+    <div class="asset_create">
+        <h1>Create Property</h1>
+        <form ng-submit="create()" novalidate>
+            <div>
+                <label for="assetTypeCode">Asset Type</label>
+                <div>
+                    <input type="text" data-ng-model="assetTypeCode" id="assetTypeCode" placeholder="" required>
+                </div>
+            </div>
+            <div>
+                <label for="propertyTypeCode">Property Type</label>
+                <div>
+                    <input type="text" data-ng-model="propertyTypeCode" id="propertyTypeCode" placeholder="" required>
+                </div>
+            </div>
+            <div>
+                <label for="propertyName">Property Name</label>
+                <div>
+                    <input type="text" data-ng-model="propertyName" id="propertyName" placeholder="" required>
+                </div>
+            </div>
+            <div>
+                <label for="propertyAddressStreet">Property Address</label>
+                <div>
+                    <input type="text" data-ng-model="propertyAddressStreet" id="propertyAddressStreet" placeholder="" required>
+                </div>
+            </div>
+            <div>
+                <label for="propertyAddressCity">Property City</label>
+                <div>
+                    <input type="text" data-ng-model="propertyAddressCity" id="propertyAddressCity" placeholder="" required>
+                </div>
+            </div>
+            <div>
+                <label for="propertyAddressState">Property State</label>
+                <div>
+                    <input type="text" data-ng-model="propertyAddressState" id="propertyAddressState" placeholder="" required>
+                </div>
+            </div>
+            <div>
+                <label for="propertyAddressZip">Property Zip Code</label>
+                <div>
+                    <input type="text" data-ng-model="propertyAddressZip" id="propertyAddressZip" placeholder="" required>
+                </div>
+            </div>
+            <div>
+                <input type="submit">
+            </div>
+            <div data-ng-show="error">
+                <strong data-ng-bind="error"></strong>
+            </div>
+        </form>
+    </div>
+</div>
