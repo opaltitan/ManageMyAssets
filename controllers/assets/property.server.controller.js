@@ -2,7 +2,9 @@
  * Created by Justin on 8/26/2015.
  */
 var Asset = require('mongoose').model('Asset'),
-    Property = require('mongoose').model('Property');
+    Property = require('mongoose').model('Property'),
+    mongoose = require('mongoose'),
+    ObjectId = mongoose.Schema.ObjectId;
 
 var getErrorMessage = function(err){
     var message = '';
@@ -61,7 +63,22 @@ exports.update = function(req, res) {
     });
 };
 
-exports.propertyById = function(req, res, next, id) {
+exports.propertyById = function(req, res, next) {
+    var qAsset = req.asset;
+
+    Property.findOne()
+        .populate('createdUser', 'firstName lastName')
+        .populate('asset')
+        .where('asset').equals(qAsset)
+        .exec(function(err, property){
+            if(err) return next(err);
+            if(!property) return next(new Error('Failed to load asset ' + qAsset._id));
+            req.property = property;
+
+            //res.json(property);
+            next();
+        });
+  /*
     Property.findById(id)
         .populate('createdUser', 'firstName lastName')
         .populate('asset')
@@ -72,6 +89,7 @@ exports.propertyById = function(req, res, next, id) {
             req.property = property;
             next();
         });
+*/
 };
 
 exports.validateSave = function(req, res, next) {

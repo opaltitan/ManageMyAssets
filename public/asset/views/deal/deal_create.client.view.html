@@ -1,10 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+<div data-ng-controller="DealController" data-ng-init="openCreate()">
+    <div class="asset_create" ng-if="assetTypeCode=='Deal'">
+        <h1>Create Deal</h1>
+        <form ng-submit="create()" novalidate>
+            <div>
+                <label for="assetTypeCode">Asset Type</label>
+                <div>
+                    <input type="text" data-ng-model="assetTypeCode" id="assetTypeCode" placeholder="" required>
+                </div>
+            </div>
+            <div>
+                <label for="dealTypeCode">Deal Type</label>
+                <div>
+                    <input type="text" data-ng-model="dealTypeCode" id="dealTypeCode" placeholder="" required>
+                </div>
+            </div>
+            <div>
+                <label for="dealName">Deal Name</label>
+                <div>
+                    <input type="text" data-ng-model="dealName" id="dealName" placeholder="" required>
+                </div>
+            </div>
+            <div>
+                <input type="submit">
+            </div>
+            <div data-ng-show="error">
+                <strong data-ng-bind="error"></strong>
+            </div>
+        </form>
+    </div>
+</div>

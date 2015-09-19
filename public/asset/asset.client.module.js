@@ -1,4 +1,4 @@
 /**
  * Created by Justin on 8/22/2015.
  */
-angular.module('asset',['ngAnimate']);
+angular.module('asset',['ngAnimate','ui.router']);

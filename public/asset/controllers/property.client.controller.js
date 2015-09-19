@@ -1,44 +1,58 @@
 /**
  * Created by Justin on 8/29/2015.
  */
-angular.module('property').controller('PropertyController', ['$scope', '$state', '$stateParams', '$routeParams', '$location', 'Authentication', 'Assets_Update', 'Property_Select', 'Property_Update', 'Socket', 'Users',
-    function($scope, $state, $stateParams, $routeParams, $location, Authentication, Assets_Update, Property_Select, Property_Update, Socket, Users){
+angular.module('property').controller('PropertyController', ['$scope', '$state', '$stateParams', '$routeParams', '$location', 'Authentication', 'Property_Select', 'Assets_Update', 'Property_Update', 'Socket', 'Users',
+    function($scope, $state, $stateParams, $routeParams, $location, Authentication, Property_Select, Assets_Update, Property_Update, Socket, Users){
         $scope.authentication = Authentication;
         //$scope.users = Users.query();
-        $scope.properties = [];
+        //$scope.properties = [];
 
-        Socket.on('connect', function(){
-            $scope.properties = Property_Select.query();
-        });
+        //Socket.on('asset_addition', function(data){
+        //    $scope.properties = [];
+        //    $scope.properties = Property_Select.query();
 
-        Socket.on('asset_addition', function(propertyId){
-            //var asset = Assets.query(assetId);
-            //$scope.assets.push(asset);
-            $scope.properties = Property_Select.query();
-        });
+            //Socket.emit('connect', data);
+        //});
 
-        $scope.$on('$destroy', function(){
-            Socket.removeListener('connect');
-        });
+        //$scope.$on('$destroy', function(){
+        //    if($state.transition != 'app.asset.list' && $state.transition != 'app.asset.list.create' && $state.transition != 'app.asset.list.details'){
+        //        Socket.removeListener('connect');
+        //        Socket.removeListener('asset_addition');
+        //    }
+        //});
 
-        $scope.find = function(data){
-            Socket.emit('connect', data);
-        };
+        //$scope.find = function(data){
+        //    Socket.emit('connect', data);
+        //};
+
+        //Socket.on('connect', function(){
+        //    $scope.properties = [];
+        //    $scope.properties = Property_Select.query();
+        //});
 
         $scope.findOne = function(){
-            $scope.property = Property_Select.get({
-                propertyId: $stateParams.propertyId
-            });
+            $scope.assetTypeCode = $stateParams.assetTypeCode;
+            if($scope.assetTypeCode=='Property'){
+                $scope.property = Property_Select.get({
+                    assetId: $stateParams.assetId
+                });
+            }
+        };
+
+        $scope.openCreate = function(){
+            $scope.assetTypeCode = $stateParams.assetTypeCode;
         };
 
         $scope.update = function(){
             var property = $scope.property;
             property.$update(function(response){
-                Socket.emit('asset_addition', response._id);
+                $scope.properties = [];
+                Socket.emit('properties_list', { asset_id: $scope.property.asset._id, type: 'refresh'});
                 //$location.path('property/' + $scope.property._id);
             }, function(errorResponse){
                 $scope.error = errorResponse.data.message;
             });
+            //Socket.emit('properties_list', { type: 'refresh'});
         };
 
         $scope.create = function(){
@@ -55,12 +69,13 @@ angular.module('property').controller('PropertyController', ['$scope', '$state',
                 asset: asset
             });
             property.$save(function(response){
-                $state.go('app.asset');
-                Socket.emit('asset_addition', response._id);
+                Socket.emit('properties_list', { asset_id: response.asset, type: 'addition' });
+                $state.go('app.asset.list');
                 //$location.path('/#!/');
             }, function(errorResponse){
                 $scope.error = errorResponse.data.message;
             });
+            //Socket.emit('properties_list', { type:'refresh' });
         };
     }
 ]);

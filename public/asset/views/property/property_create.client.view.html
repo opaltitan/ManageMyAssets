@@ -1,13 +1,13 @@
-<div data-ng-controller="PropertyController">
-    <div class="asset_create">
+<div data-ng-controller="PropertyController" data-ng-init="openCreate()">
+    <div class="asset_create" ng-if="assetTypeCode=='Property'">
         <h1>Create Property</h1>
         <form ng-submit="create()" novalidate>
-            <div>
+<!--            <div>
                 <label for="assetTypeCode">Asset Type</label>
                 <div>
                     <input type="text" data-ng-model="assetTypeCode" id="assetTypeCode" placeholder="" required>
                 </div>
-            </div>
+            </div>-->
             <div>
                 <label for="propertyTypeCode">Property Type</label>
                 <div>

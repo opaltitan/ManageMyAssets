@@ -1,7 +1,19 @@
 <div data-ng-controller="PropertyController" data-ng-init="findOne()">
-    <div class="asset_create">
+    <div class="asset_create" ng-if="assetTypeCode=='Property'">
         <h1>Edit Property</h1>
         <form data-ng-submit="update()" novalidate>
+            <div class="total_input">
+                <label for="asset" class="label_inline">Asset ID</label>
+                <div class="input_inline">
+                    <input type="text" data-ng-model="property.asset._id" id="asset" placeholder="" required ng-disabled="true" class="input_inline">
+                </div>
+            </div>
+            <div class="total_input">
+                <label for="propertyId" class="label_inline">Property ID</label>
+                <div class="input_inline">
+                    <input type="text" data-ng-model="property._id" id="propertyId" placeholder="" required ng-disabled="true" class="input_inline">
+                </div>
+            </div>
             <div class="total_input">
                 <label for="assetTypeCode" class="label_inline">Asset Type</label>
                 <div class="input_inline">
@@ -47,9 +59,9 @@
             <div class="total_input">
                 <input type="submit">
             </div>
-            <div data-ng-show="error" class="total_input">
+            <!--<div data-ng-show="error" class="total_input">-->
                 <strong data-ng-bind="error"></strong>
-            </div>
+            <!--</div>-->
         </form>
     </div>
 </div>

@@ -30,10 +30,45 @@ module.exports = function(server, io, mongoStore){
         });
     });
 
-    var assetNamespace = io.of('/asset');
-    assetNamespace.on('connection', function(socket){
-        require('../socketio/asset.server.socketio.js')(assetNamespace, socket);
+    io.sockets.on('connection', function(socket){
+        console.log('connected');
+        //socket.emit('properties_list', {type:'refresh'});
+        socket.on('properties_list', function(message){
+            console.log('connected in properties_list');
+            //message.type = 'refresh';
+            //socket.join('properties_list');
+            io.emit('properties_list', message);
+            //socket.emit('properties_list', message);
+        });
+
+        socket.on('deals_list', function(message) {
+            console.log('connected in deals_list');
+            //message.type = 'refresh';
+            console.log('message.asset_id:' + message.asset_id);
+            io.emit('deals_list', message);
+            message = "";
+        });
+
+        socket.on('disconnect', function(){
+            console.log('disconnected');
+        });
+        //require('../socketio/property.server.socketio')(io, socket);
+        //require('../socketio/deal.server.socketio')(io, socket);
     });
+
+    //var propertyNamespace = io.of('/property');
+    //propertyNamespace.on('connection', function(socket){
+        //console.log('User: ' + socket.request.user);
+    //    require('../socketio/property.server.socketio.js')(propertyNamespace, socket);
+    //});
+
+    //var dealNamespace = io.of('/deal');
+    //dealNamespace.on('connection', function(socket){
+    //    require('../socketio/deal.server.socketio.js')(dealNamespace, socket);
+    //});
+
+
+
     /*var activityNamespace = io.of('/activity');
     activityNamespace.on('connection', function(socket) {
         require('../controllers/activity.server.controller')(activityNamespace, socket);

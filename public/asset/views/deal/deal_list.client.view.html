@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+<div>
+    <h1>Deals</h1>
+    <a ui-sref="app.asset.list.create({ assetTypeCode: 'Deal' })">New Deal</a>
+    <div class="asset_list_sub">
+        <label for="search.dealTypeCode">Deal Type</label>
+        <input type="text" id="search.dealTypeCode" ng-model="search.dealTypeCode"/>
+    </div>
+    <div data-ng-init="find()" class="asset_list_sub">
+        <ul>
+            <li data-ng-repeat="deal in deals | filter : search" class="assets">
+                <a ui-sref="app.asset.list.details({ assetTypeCode: deal.asset.assetTypeCode, assetId: deal.asset._id })">
+                    <div>
+                        <small data-ng-bind="deal.dealName" class="list_item"></small>
+                        <small data-ng-bind="deal.dealTypeCode" class="list_item"></small>
+                        <!--<small data-ng-bind="property.propertyAddressState" class="list_item"></small>-->
+                        <!--                   <small data-ng-bind="property.created"></small>-->
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

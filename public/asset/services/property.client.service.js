@@ -3,8 +3,8 @@
  */
 angular.module('property')
     .factory('Property_Select', ['$resource', function($resource){
-        return $resource('api/assets/property/:propertyId', {
-            propertyId: '@_id'
+        return $resource('api/assets/property/:assetId', {
+            assetId: '@asset._id'
         }, {
             update: {
                 method: 'PUT'
@@ -24,7 +24,7 @@ angular.module('property')
     .service('Socket', ['Authentication', '$location', '$timeout',
         function(Authentication, $location, $timeout){
             if(Authentication.user){
-                this.socket = io('/asset');
+                this.socket = io();
             } else {
                 $location.path('/');
             }

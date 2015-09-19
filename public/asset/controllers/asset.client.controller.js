@@ -1,11 +1,20 @@
 /**
  * Created by Justin on 8/22/2015.
  */
-angular.module('asset').controller('AssetController', ['$scope', '$routeParams', '$location', 'Authentication', 'Assets_Select', 'Assets_Update', 'Property_Update', 'Socket', 'Users',
-    function($scope, $routeParams, $location, Authentication, Assets_Select, Assets_Update, Property_Update, Socket, Users){
+angular.module('asset').controller('AssetController', ['$scope', '$state', '$stateParams', '$routeParams', '$location', 'Authentication', 'Assets_Select', 'Assets_Update', 'Property_Update', 'Users',
+    function($scope, $state, $stateParams, $routeParams, $location, Authentication, Assets_Select, Assets_Update, Property_Update, Users){
         $scope.authentication = Authentication;
         //$scope.users = Users.query();
+        $scope.assetTypeCode = $stateParams.assetTypeCode;
         $scope.assets = [];
+
+        //$scope.find = function(){
+        //    $state.go('app.asset.list');
+        //};
+
+        $scope.openCreate = function(){
+            $scope.assetTypeCode = $stateParams.assetTypeCode;
+        };
 
 /*        Socket.on('connect', function(){
             $scope.assets = Assets_Select.query();

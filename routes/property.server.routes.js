@@ -9,11 +9,11 @@ module.exports = function(app) {
     app.route('/api/assets/property')
         .get(properties.list)
         .post(users.requiresLogin, assets.validateSave, properties.validateSave, assets.create, properties.create);
-    app.route('/api/assets/property/:propertyId')
-        .get(properties.read)
-        .put(users.requiresLogin, properties.validateSave, properties.update);
+    app.route('/api/assets/property/:assetId')
+        .get(properties.propertyById, properties.read)
+        .put(users.requiresLogin, properties.propertyById, properties.validateSave, properties.update);
     app.route('/api/assets/property/create')
         .get(assets.list)
         .post(users.requiresLogin, assets.validateSave, properties.validateSave, assets.create, properties.create);
-    app.param('propertyId', properties.propertyById);
+    app.param('assetId', assets.assetById);
 };

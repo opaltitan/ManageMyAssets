@@ -1,10 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+<div data-ng-controller="DealController" data-ng-init="findOne()">
+    <div class="asset_create" ng-if="assetTypeCode=='Deal'">
+        <h1>Edit Deal</h1>
+        <form data-ng-submit="update()" novalidate>
+            <div class="total_input">
+                <label for="asset" class="label_inline">Asset ID</label>
+                <div class="input_inline">
+                    <input type="text" data-ng-model="deal.asset._id" id="asset" placeholder="" required ng-disabled="true" class="input_inline">
+                </div>
+            </div>
+            <div class="total_input">
+                <label for="dealId" class="label_inline">Deal ID</label>
+                <div class="input_inline">
+                    <input type="text" data-ng-model="deal._id" id="dealId" placeholder="" required ng-disabled="true" class="input_inline">
+                </div>
+            </div>
+            <div class="total_input">
+                <label for="assetTypeCode" class="label_inline">Asset Type</label>
+                <div class="input_inline">
+                    <input type="text" data-ng-model="deal.asset.assetTypeCode" id="assetTypeCode" placeholder="" required ng-disabled="true" class="input_inline">
+                </div>
+            </div>
+            <div class="total_input">
+                <label for="dealTypeCode" class="label_inline">Deal Type</label>
+                <div class="input_inline">
+                    <input type="text" data-ng-model="deal.dealTypeCode" id="dealTypeCode" placeholder="" required class="input_inline">
+                </div>
+            </div>
+            <div class="total_input">
+                <label for="dealName" class="label_inline">Deal Name</label>
+                <div class="input_inline">
+                    <input type="text" data-ng-model="deal.dealName" id="dealName" placeholder="" required class="input_inline">
+                </div>
+            </div>
+            <div class="total_input">
+                <input type="submit">
+            </div>
+            <!--<div data-ng-show="error" class="total_input">-->
+            <strong data-ng-bind="error"></strong>
+            <!--</div>-->
+        </form>
+    </div>
+</div>
