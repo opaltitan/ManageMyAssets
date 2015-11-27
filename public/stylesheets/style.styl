@@ -118,6 +118,10 @@ ul.header > a > li {
   color: #66d69e;
 }
 
+ul.header > a.active > li {
+  background-color: $backgroundColor_Hover;
+}
+
 .label {
   color: #999999;
 }
@@ -128,6 +132,24 @@ ul.header > a > li {
 div.asset_list_sub > ul > li.assets > a > div > small.list_item {
     min-width: 150px;
     display: inline-block;
+}
+
+div.line_item_list, div.line_item_list > ul, div.line_item_list > ul > li.line_item {
+  min-width: 600px;
+}
+
+div.line_item_list > ul > li.line_item > div {
+  min-width: 150px;
+}
+
+div.line_item_list > ul > li.line_item {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+div.line_item_list > ul > li.line_item > div > small.list_item {
+  color: #00d6b2;
+  min-width: 150px;
 }
 
 ul > li {
@@ -173,7 +195,11 @@ ul > li > .room_edit {
   display: inline-block;
   vertical-align: middle;
 }
-  
+
+.assets.active {
+  background-color: $backgroundColor_Hover;
+}
+
 .assets.ng-enter {
   animation: 0.6s item-enter;
 }

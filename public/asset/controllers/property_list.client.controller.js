@@ -1,39 +1,40 @@
 /**
  * Created by Justin on 9/10/2015.
  */
-angular.module('property').controller('PropertyListController', ['$scope', '$state', '$stateParams', '$routeParams', '$location', 'Authentication', 'Property_Select', 'Socket', 'Users',
+angular.module('asset').controller('PropertyListController', ['$scope', '$state', '$stateParams', '$routeParams', '$location', 'Authentication', 'Property_Select', 'Socket', 'Users',
     function($scope, $state, $stateParams, $routeParams, $location, Authentication, Property_Select, Socket, Users){
         $scope.authentication = Authentication;
         //$scope.users = Users.query();
-        $scope.properties = [];
+        $scope.assets = [];
+        $scope.toggleProperty = {item: -1};
 
         $scope.$on('$destroy', function(){
             Socket.removeListener('properties_list');
         });
 
         $scope.find = function(){
-            //Socket.emit('connect', data);
-            $scope.properties = [];
-            $scope.properties = Property_Select.query();
+            $scope.assets = [];
+            $scope.assets = Property_Select.query();
+        };
+
+        $scope.openList = function(){
+            $scope.artifactTypeCode = $stateParams.artifactTypeCode;
         };
 
         Socket.on('properties_list', function(message){
-            //$scope.properties = [];
-            //$scope.properties = Property_Select.query();
-
             var propertyIndex = 0;
             var property_update = new Property_Select.get({
-                assetId: message.asset_id
+                artifactId: message.artifact_id
             });
             if(message.type=='addition'){
-                $scope.properties.push(property_update);
+                $scope.assets.push(property_update);
             } else {
-                angular.forEach($scope.properties, function(propertyObject, propertyKey){
-                    if(propertyObject.asset._id===message.asset_id){
+                angular.forEach($scope.assets, function(propertyObject, propertyKey){
+                    if(propertyObject.artifact._id===message.artifact_id){
                         propertyIndex = propertyKey;
                     }
                 });
-                $scope.properties[propertyIndex] = property_update;
+                $scope.assets[propertyIndex] = property_update;
             }
         });
     }

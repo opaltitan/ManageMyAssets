@@ -1,9 +1,9 @@
 <div data-ng-show="authentication.user">
     <ul class="header">
-        <a ng-href="/#!/"><li>Dashboard</li></a>
-        <a ui-sref="app.asset.list"><li>Assets</li></a>
-        <a ui-sref="activities"><li>Activities</li></a>
-        <a ui-sref="reporting"><li>Reporting</li></a>
-        <a ui-sref="admin"><li>Admin</li></a>
+        <a ng-href="/#!/" data-ng-class="{'active' : selection=='dashboard'}" data-ng-click="selection='dashboard'"><li>Dashboard</li></a>
+        <a ui-sref="app.list({ artifactTypeCode: 'asset'})" data-ng-class="{'active': selection=='asset'}" data-ng-click="selection='asset'"><li>Assets</li></a>
+        <a ui-sref="app.list({ artifactTypeCode: 'activities'})" data-ng-class="{'active': selection=='activities'}" data-ng-click="selection='activities'"><li>Activities</li></a>
+        <a ui-sref="reporting" data-ng-class="{'active': selection=='reporting'}" data-ng-click="selection='reporting'"><li>Reporting</li></a>
+        <a ui-sref="admin" data-ng-class="{'active': selection=='admin'}" data-ng-click="selection='admin'"><li>Admin</li></a>
     </ul>
 </div>

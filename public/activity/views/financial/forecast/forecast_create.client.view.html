@@ -1,0 +1,73 @@
+<div data-ng-controller="ForecastController" data-ng-init="openCreate()">
+    <!--<div class="asset_create">-->
+    <div class="asset_create" ng-if="subArtifactTypeCode=='Forecast' && artifactId=='0'">
+        <h1>Create Forecast</h1>
+        <form ng-submit="create()" novalidate>
+            <!--            <div>
+                            <label for="assetTypeCode">Asset Type</label>
+                            <div>
+                                <input type="text" data-ng-model="assetTypeCode" id="assetTypeCode" placeholder="" required>
+                            </div>
+                        </div>-->
+            <div>
+                <label for="activityTypeCode">Activity Type</label>
+                <div>
+                    <input type="text" data-ng-model="activityTypeCode" id="activityTypeCode" placeholder="" required>
+                </div>
+            </div>
+            <div>
+                <label for="property">Asset</label>
+                <div>
+                    <select data-ng-model="asset" ng-options="p.assetDetails.property.propertyName for p in properties track by p._id" id="property">
+
+                    </select>
+                </div>
+            </div>
+            <div>
+                <label for="effectiveDate">Effective Date</label>
+                <div>
+                    <input type="text" data-ng-model="effectiveDate" id="effectiveDate" placeholder="" required>
+                </div>
+            </div>
+            <div class="line_item_list">
+                <ul>
+                    <li ng-repeat="statement in statements" class="line_item">
+                        <div class="line_item_list">
+                            <small class="list_item">Begin Date</small>
+                            <div>
+                                <input type="text" data-ng-model="statement.statementDateBegin | date:'MM/dd/yyyy'" class="list_item">
+                            </div>
+                            <small class="list_item">End Date</small>
+                            <div>
+                                <input type="text" data-ng-model="statement.statementDateEnd | date:'MM/dd/yyyy'" class="list_item">
+                            </div>
+                            <small class="list_item">Statement Type</small>
+                            <div>
+                                <input type="text" data-ng-model="statement.statementTypeCode" class="list_item">
+                            </div>
+                        </div>
+                        <div class="line_item_list">
+                            <small class="list_item">Line Items</small>
+                            <ul>
+                                <li ng-repeat="forecastLineItem in statement.statementLineItems" class="line_item">
+                                    <div>
+                                        <small data-ng-bind="forecastLineItem.lineItemCode" class="list_item"></small>
+                                    </div>
+                                    <div>
+                                        <input type="text" ng-model="forecastLineItem.lineItemAmount" class="list_item">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <input type="submit">
+            </div>
+            <div data-ng-show="error">
+                <strong data-ng-bind="error"></strong>
+            </div>
+        </form>
+    </div>
+</div>

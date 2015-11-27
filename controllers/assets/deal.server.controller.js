@@ -25,7 +25,7 @@ var getErrorMessage = function(err){
 };
 
 
-exports.create = function(req, res) {
+exports.create = function(req, res, next) {
     var deal = new Deal(req.body);
     deal.asset = req.body.asset._id;
 
@@ -35,7 +35,9 @@ exports.create = function(req, res) {
                 message: getErrorMessage(err)
             });
         } else {
-            res.json(deal);
+            req.deal = deal;
+            next();
+            //res.json(deal);
         }
     });
 };

@@ -1,59 +1,53 @@
 <div data-ng-controller="PropertyController" data-ng-init="findOne()">
-    <div class="asset_create" ng-if="assetTypeCode=='Property'">
+    <div class="asset_create" ng-if="subArtifactTypeCode=='Property' && artifactId!='0'">
         <h1>Edit Property</h1>
         <form data-ng-submit="update()" novalidate>
             <div class="total_input">
                 <label for="asset" class="label_inline">Asset ID</label>
                 <div class="input_inline">
-                    <input type="text" data-ng-model="property.asset._id" id="asset" placeholder="" required ng-disabled="true" class="input_inline">
-                </div>
-            </div>
-            <div class="total_input">
-                <label for="propertyId" class="label_inline">Property ID</label>
-                <div class="input_inline">
-                    <input type="text" data-ng-model="property._id" id="propertyId" placeholder="" required ng-disabled="true" class="input_inline">
+                    <input type="text" data-ng-model="asset._id" id="asset" placeholder="" required ng-disabled="true" class="input_inline">
                 </div>
             </div>
             <div class="total_input">
                 <label for="assetTypeCode" class="label_inline">Asset Type</label>
                 <div class="input_inline">
-                    <input type="text" data-ng-model="property.asset.assetTypeCode" id="assetTypeCode" placeholder="" required ng-disabled="true" class="input_inline">
+                    <input type="text" data-ng-model="asset.assetTypeCode" id="assetTypeCode" placeholder="" required ng-disabled="true" class="input_inline">
                 </div>
             </div>
             <div class="total_input">
                 <label for="propertyTypeCode" class="label_inline">Property Type</label>
                 <div class="input_inline">
-                    <input type="text" data-ng-model="property.propertyTypeCode" id="propertyTypeCode" placeholder="" required class="input_inline">
+                    <input type="text" data-ng-model="asset.assetDetails.property.propertyTypeCode" id="propertyTypeCode" placeholder="" required class="input_inline">
                 </div>
             </div>
             <div class="total_input">
                 <label for="propertyName" class="label_inline">Property Name</label>
                 <div class="input_inline">
-                    <input type="text" data-ng-model="property.propertyName" id="propertyName" placeholder="" required class="input_inline">
+                    <input type="text" data-ng-model="asset.assetDetails.property.propertyName" id="propertyName" placeholder="" required class="input_inline">
                 </div>
             </div>
             <div class="total_input">
                 <label for="propertyAddressStreet" class="label_inline">Property Address</label>
                 <div class="input_inline">
-                    <input type="text" data-ng-model="property.propertyAddressStreet" id="propertyAddressStreet" placeholder="" required class="input_inline">
+                    <input type="text" data-ng-model="asset.assetDetails.property.propertyAddressStreet" id="propertyAddressStreet" placeholder="" required class="input_inline">
                 </div>
             </div>
             <div class="total_input">
                 <label for="propertyAddressCity" class="label_inline">Property City</label>
                 <div class="input_inline">
-                    <input type="text" data-ng-model="property.propertyAddressCity" id="propertyAddressCity" placeholder="" required class="input_inline">
+                    <input type="text" data-ng-model="asset.assetDetails.property.propertyAddressCity" id="propertyAddressCity" placeholder="" required class="input_inline">
                 </div>
             </div>
             <div class="total_input">
                 <label for="propertyAddressState" class="label_inline">Property State</label>
                 <div class="input_inline">
-                    <input type="text" data-ng-model="property.propertyAddressState" id="propertyAddressState" placeholder="" required class="input_inline">
+                    <input type="text" data-ng-model="asset.assetDetails.property.propertyAddressState" id="propertyAddressState" placeholder="" required class="input_inline">
                 </div>
             </div>
             <div class="total_input">
                 <label for="propertyAddressZip" class="label_inline">Property Zip Code</label>
                 <div class="input_inline">
-                    <input type="text" data-ng-model="property.propertyAddressZip" id="propertyAddressZip" placeholder="" required class="input_inline">
+                    <input type="text" data-ng-model="asset.assetDetails.property.propertyAddressZip" id="propertyAddressZip" placeholder="" required class="input_inline">
                 </div>
             </div>
             <div class="total_input">

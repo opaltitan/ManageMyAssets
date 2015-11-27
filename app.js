@@ -59,8 +59,11 @@ var app = express();
     require('./routes/index.server.routes.js')(app);
     require('./routes/users.server.routes.js')(app);
     require('./routes/asset.server.routes.js')(app);
-    require('./routes/property.server.routes.js')(app);
-    require('./routes/deal.server.routes.js')(app);
+    require('./routes/activity.server.routes.js')(app);
+    //require('./routes/property.server.routes.js')(app);
+    //require('./routes/deal.server.routes.js')(app);
+    //require('./routes/activity.server.routes.js')(app);
+    //require('./routes/financial.server.routes.js')(app);
 
     app.use(express.static('./public'));
     require('./config/socketio')(server, io, mongoStore);

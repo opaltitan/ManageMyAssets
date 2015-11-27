@@ -25,7 +25,7 @@ var getErrorMessage = function(err){
     return message;
 };
 
-exports.create = function(req, res) {
+exports.create = function(req, res, next) {
     var property = new Property(req.body);
     property.asset = req.body.asset._id;
 
@@ -35,7 +35,9 @@ exports.create = function(req, res) {
                 message: getErrorMessage(err)
             });
         } else {
-            res.json(property);
+            //res.json(property);
+            req.property = property;
+            next();
         }
     });
 };
@@ -110,7 +112,7 @@ exports.list = function(req, res) {
     Property.find()
         .sort('-created')
         .populate('createdUser', 'firstName lastName')
-        .populate('asset', 'assetTypeCode')
+        .populate('asset')
         .exec(function(err, properties){
             if(err) {
                 return res.status(400).send({

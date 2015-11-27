@@ -1,22 +1,28 @@
-<div>
-    <h1>Deals</h1>
-    <a ui-sref="app.asset.list.create({ assetTypeCode: 'Deal' })">New Deal</a>
-    <div class="asset_list_sub">
-        <label for="search.dealTypeCode">Deal Type</label>
-        <input type="text" id="search.dealTypeCode" ng-model="search.dealTypeCode"/>
-    </div>
-    <div data-ng-init="find()" class="asset_list_sub">
-        <ul>
-            <li data-ng-repeat="deal in deals | filter : search" class="assets">
-                <a ui-sref="app.asset.list.details({ assetTypeCode: deal.asset.assetTypeCode, assetId: deal.asset._id })">
-                    <div>
-                        <small data-ng-bind="deal.dealName" class="list_item"></small>
-                        <small data-ng-bind="deal.dealTypeCode" class="list_item"></small>
-                        <!--<small data-ng-bind="property.propertyAddressState" class="list_item"></small>-->
-                        <!--                   <small data-ng-bind="property.created"></small>-->
-                    </div>
-                </a>
-            </li>
-        </ul>
+<div data-ng-controller="DealListController" data-ng-init="openList()">
+    <div ng-if="artifactTypeCode=='asset'">
+        <h1>Deals</h1>
+        <a ui-sref="app.list.details({ subArtifactTypeCode: 'Deal', artifactId: '0' })">New Deal</a>
+        <div class="asset_list_sub">
+            <label for="search.dealTypeCode">Deal Type</label>
+            <input type="text" id="search.dealTypeCode" ng-model="search.assetDetails.deal.dealTypeCode"/>
+        </div>
+        <div class="asset_list_sub">
+            <label for="search.dealName">Deal Type</label>
+            <input type="text" id="search.dealName" ng-model="search.assetDetails.deal.dealName"/>
+        </div>
+        <div data-ng-init="find()" class="asset_list_sub">
+            <ul>
+                <li data-ng-repeat="asset in assets | filter : search" data-ng-click="toggleDeal.item = $index" data-ng-class="{'active' : toggleDeal.item == $index}"  class="assets">
+                    <a ui-sref="app.list.details({ subArtifactTypeCode: 'Deal', artifactId: asset.artifact._id })">
+                        <div>
+                            <small data-ng-bind="asset.assetDetails.deal.dealName" class="list_item"></small>
+                            <small data-ng-bind="asset.assetDetails.deal.dealTypeCode" class="list_item"></small>
+                            <!--<small data-ng-bind="property.propertyAddressState" class="list_item"></small>-->
+                            <!--                   <small data-ng-bind="property.created"></small>-->
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>

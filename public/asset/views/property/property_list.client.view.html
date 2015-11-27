@@ -1,24 +1,24 @@
-<!--<div data-ng-controller="PropertyListController">-->
-    <div>
+<div data-ng-controller="PropertyListController" data-ng-init="openList()">
+    <div ng-if="artifactTypeCode=='asset'">
         <h1>Properties</h1>
-        <a ui-sref="app.asset.list.create({ assetTypeCode: 'Property' })">New Property</a>
+        <a ui-sref="app.list.details({ subArtifactTypeCode: 'Property', artifactId: '0' })">New Property</a>
         <div class="asset_list_sub">
             <label for="search.propertyName">Property Name</label>
-            <input type="text" id="search.propertyName" ng-model="search.propertyName" />
+            <input type="text" id="search.propertyName" ng-model="search.assetDetails.property.propertyName" />
         </div>
         <div class="asset_list_sub">
             <label for="search.propertyTypeCode">Property Type</label>
-            <input type="text" id="search.propertyTypeCode" ng-model="search.propertyTypeCode"/>
+            <input type="text" id="search.propertyTypeCode" ng-model="search.assetDetails.property.propertyTypeCode"/>
         </div>
         <div data-ng-init="find()" class="asset_list_sub">
             <ul>
-                <li data-ng-repeat="property in properties | filter : search" class="assets">
-                    <a ui-sref="app.asset.list.details({ assetTypeCode: property.asset.assetTypeCode, assetId: property.asset._id })">
+                <li data-ng-repeat="asset in assets | filter : search" data-ng-click="toggleProperty.item = $index" data-ng-class="{'active' : toggleProperty.item == $index}" class="assets">
+                    <a ui-sref="app.list.details({ subArtifactTypeCode: 'Property', artifactId: asset.artifact._id })">
                         <div>
-                            <small data-ng-bind="property.propertyName" class="list_item"></small>
-                            <small data-ng-bind="property.propertyTypeCode" class="list_item"></small>
+                            <small data-ng-bind="asset.assetDetails.property.propertyName" class="list_item"></small>
+                            <small data-ng-bind="asset.assetDetails.property.propertyTypeCode" class="list_item"></small>
                             <!--<small data-ng-bind="property.asset._id" class="list_item"></small>-->
-                            <small data-ng-bind="property.propertyAddressState" class="list_item"></small>
+                            <small data-ng-bind="asset.assetDetails.property.propertyAddressState" class="list_item"></small>
      <!--                   <small data-ng-bind="property.created"></small>-->
                         </div>
                     </a>
@@ -26,5 +26,5 @@
             </ul>
         </div>
     </div>
-<!--</div>-->
+</div>
 <!--<div ui-view="details"></div>-->

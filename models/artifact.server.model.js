@@ -29,11 +29,17 @@ var CommentSchema = new schema ({
 });
 
 var ArtifactSchema = new schema ({
-    artifactType: {
+    artifactTypeCode: {
         type: String,
         trim: true,
         required: 'Artifact Type Required.',
-        enum: ['Asset','Activity','Workflow']
+        enum: ['asset','activities','workflows']
+    },
+    subArtifactTypeCode: {
+        type: String,
+        trim: true,
+        required: 'Sub-Artifact Type Required.',
+        enum: ['Property','Deal','Actuals','Budget','Forecast']
     },
     comments: [CommentSchema],
     created: {

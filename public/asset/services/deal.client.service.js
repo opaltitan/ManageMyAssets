@@ -1,14 +1,20 @@
 /**
  * Created by Justin on 8/29/2015.
  */
+/*
 angular.module('deal')
     .factory('Deal_Select', ['$resource', function($resource){
-        return $resource('api/assets/deal/:assetId', {
-            assetId: '@asset._id'
+        return $resource('api/assets/deal/:artifactId', {
+            artifactId: '@asset.artifact'
         }, {
             update: {
                 method: 'PUT'
             }
+        });
+    }])
+    .factory('Artifacts_Update', ['$resource', function($resource){
+        return $resource('api/artifacts', {
+
         });
     }])
     .factory('Assets_Update', ['$resource', function($resource){
@@ -48,4 +54,4 @@ angular.module('deal')
                 }
             };
         }
-    ]);
+    ]);*/

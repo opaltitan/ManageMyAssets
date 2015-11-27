@@ -1,57 +1,34 @@
 /**
  * Created by Justin on 8/29/2015.
  */
-angular.module('deal').controller('DealController', ['$scope', '$state', '$stateParams', '$routeParams', '$location', 'Authentication', 'Assets_Update', 'Deal_Select', 'Deal_Update', 'Socket', 'Users',
-    function($scope, $state, $stateParams, $routeParams, $location, Authentication, Assets_Update, Deal_Select, Deal_Update, Socket, Users){
+angular.module('asset').controller('DealController', ['$scope', '$state', '$stateParams', '$routeParams', '$location', 'Authentication', 'Artifacts_Update', 'Assets_Update', 'Deal_Select', 'Socket', 'Users',
+    function($scope, $state, $stateParams, $routeParams, $location, Authentication, Artifacts_Update, Assets_Update, Deal_Select, Socket, Users){
         $scope.authentication = Authentication;
         //$scope.users = Users.query();
         $scope.deals = [];
 
-        //Socket.on('connect', function(){
-            //$scope.deals = [];
-            //$scope.deals = Deal_Select.query();
-        //});
-
-        //Socket.on('asset_addition', function(data){
-            //var asset = Assets.query(assetId);
-            //$scope.assets.push(asset);
-            //$scope.deals = Deal_Select.query();
-        //    $scope.deals = [];
-        //    $scope.deals = Deal_Select.query();
-            //Socket.emit('connect', data);
-        //});
-
-        //$scope.$on('$destroy', function(){
-            //if($state.transition != 'app.asset.list' && $state.transition != 'app.asset.list.create' && $state.transition != 'app.asset.list.details') {
-            //    Socket.removeListener('connect');
-            //    Socket.removeListener('asset_addition');
-           // }
-        //});
-
-        //$scope.find = function(data){
-            //Socket.emit('connect', data);
-        //};
-
         $scope.findOne = function(){
-            $scope.assetTypeCode = $stateParams.assetTypeCode;
-            if($scope.assetTypeCode=='Deal') {
-                $scope.deal = Deal_Select.get({
-                    assetId: $stateParams.assetId
+            $scope.artifactTypeCode = $stateParams.artifactTypeCode;
+            $scope.subArtifactTypeCode = $stateParams.subArtifactTypeCode;
+            $scope.artifactId = $stateParams.artifactId;
+            if($scope.subArtifactTypeCode=='Deal' && $scope.artifactId != '0') {
+                $scope.asset = Deal_Select.get({
+                    artifactId: $stateParams.artifactId
                 });
             }
         };
 
         $scope.openCreate = function(){
-            $scope.assetTypeCode = $stateParams.assetTypeCode;
+            $scope.artifactTypeCode = $stateParams.artifactTypeCode;
+            $scope.subArtifactTypeCode = $stateParams.subArtifactTypeCode;
+            $scope.artifactId = $stateParams.artifactId;
         };
 
         $scope.update = function(){
-            var deal = $scope.deal;
-            deal.$update(function(response){
-                $scope.deals = [];
-                Socket.emit('deals_list', { asset_id: $scope.deal.asset._id, type: 'refresh'});
-                $scope.deal = "";
-                $state.go('app.asset.list');
+            var asset = $scope.asset;
+            asset.$update(function(response){
+                Socket.emit('deals_list', { artifact_id: $scope.asset.artifact._id, type: 'refresh'});
+                //$state.go('app.asset.list');
                 //$location.path('property/' + $scope.property._id);
             }, function(errorResponse){
                 $scope.error = errorResponse.data.message;
@@ -59,20 +36,24 @@ angular.module('deal').controller('DealController', ['$scope', '$state', '$state
         };
 
         $scope.create = function(){
+            var artifact = new Artifacts_Update({
+                artifactTypeCode: this.artifactTypeCode,
+                subArtifactTypeCode: this.subArtifactTypeCode
+            });
             var asset = new Assets_Update({
-                assetTypeCode: this.assetTypeCode
+                assetTypeCode: this.assetTypeCode,
+                artifact: artifact,
+                assetDetails: {
+                    deal: {
+                        dealTypeCode: this.dealTypeCode,
+                        dealName: this.dealName,
+                        properties: []
+                    }
+                }
             });
-            var deal = new Deal_Select({
-                dealTypeCode: this.dealTypeCode,
-                dealName: this.dealName,
-                properties: [],
-                asset: asset
-            });
-            deal.$save(function(response){
+            asset.$save(function(response){
                 console.log('response: ' + response);
-                Socket.emit('deals_list', { asset_id: response.asset, type: 'addition'});
-                $state.go('app.asset.list');
-                //$location.path('/#!/');
+                Socket.emit('deals_list', { artifact_id: response.artifact._id, type: 'addition'});
             }, function(errorResponse){
                 $scope.error = errorResponse.data.message;
             });

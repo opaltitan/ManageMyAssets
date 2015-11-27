@@ -1,5 +1,6 @@
 <div data-ng-controller="PropertyController" data-ng-init="openCreate()">
-    <div class="asset_create" ng-if="assetTypeCode=='Property'">
+    <div ng-if="subArtifactTypeCode=='Property' && artifactId=='0'">
+    <!--<div class="asset_create">-->
         <h1>Create Property</h1>
         <form ng-submit="create()" novalidate>
 <!--            <div>
@@ -8,6 +9,24 @@
                     <input type="text" data-ng-model="assetTypeCode" id="assetTypeCode" placeholder="" required>
                 </div>
             </div>-->
+            <div>
+                <label for="artifactTypeCode">Artifact Type</label>
+                <div>
+                    <input type="text" data-ng-model="artifactTypeCode" id="artifactTypeCode" placeholder="" required>
+                </div>
+            </div>
+            <div>
+                <label for="subArtifactTypeCode">Sub Artifact Type</label>
+                <div>
+                    <input type="text" data-ng-model="subArtifactTypeCode" id="subArtifactTypeCode" placeholder="" required>
+                </div>
+            </div>
+            <div>
+                <label for="assetTypeCode">Asset Type Code</label>
+                <div>
+                    <input type="text" data-ng-model="assetTypeCode" id="assetTypeCode" placeholder="" required>
+                </div>
+            </div>
             <div>
                 <label for="propertyTypeCode">Property Type</label>
                 <div>
@@ -51,5 +70,6 @@
                 <strong data-ng-bind="error"></strong>
             </div>
         </form>
+    <!--</div>-->
     </div>
 </div>

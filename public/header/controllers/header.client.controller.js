@@ -5,5 +5,7 @@
 angular.module('header').controller('HeaderController', ['$scope', '$stateParams', 'Authentication',
     function($scope, $stateParams, Authentication){
         $scope.authentication = Authentication;
+        $scope.selection = "";
+
     }
 ]);

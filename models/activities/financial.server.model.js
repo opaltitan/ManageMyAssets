@@ -5,44 +5,16 @@ var mongoose = require('mongoose'),
     schema = mongoose.Schema,
     User = mongoose.model('User'),
     Activity = mongoose.model('Activity'),
-    Asset = mongoose.model('Asset');
-
-var LineItemSchema = new schema({
-    lineItemCode: {
-        type: String,
-        trim: true,
-        required: 'Chart of Account code required.',
-        enum: ['PPLE','INTE','NOIT','FCPCNSLDTRET']
-    },
-    lineItemAmount: {
-        type: number,
-        required: 'Line Item Amount required.'
-    }
-});
-
-var StatementSchema = new schema({
-    statementTypeCode: {
-        type: String,
-        trim: true,
-        enum: ['Acquisition Month','Actuals','Budget','Projected']
-    },
-    statementDateBegin: {
-        type: Date,
-        required: 'Must enter Statement Begin Date'
-    },
-    statementDateEnd: {
-        type: Date,
-        required: 'Must enter Statement End Date'
-    },
-    statementLineItems: [LineItemSchema]
-});
+    Statement = mongoose.model('Statement'),
+    Asset = mongoose.model('Asset'),
+    deepPopulate = require('mongoose-deep-populate')(mongoose);
 
 var FinancialSchema = new schema ({
     activity: {
         type: schema.ObjectId,
         ref: 'Activity'
     },
-    statements: [StatementSchema],
+    statements: [Statement],
     created: {
         type: Date,
         default: Date.now
@@ -61,5 +33,12 @@ var FinancialSchema = new schema ({
 });
 
 FinancialSchema.set('toJson', {getters: true, virtuals: true });
+
+FinancialSchema.plugin(deepPopulate, {
+/*    whitelist: [
+        'activity',
+        'activity.asset'
+    ]*/
+});
 
 mongoose.model('Financial', FinancialSchema);

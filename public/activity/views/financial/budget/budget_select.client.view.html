@@ -1,0 +1,70 @@
+<div data-ng-controller="BudgetController" data-ng-init="findOne()">
+    <div class="asset_create" ng-if="subArtifactTypeCode=='Budget' && artifactId!='0'">
+        <h1>View Budget</h1>
+        <form ng-submit="update()" novalidate>
+            <!--            <div>
+                            <label for="assetTypeCode">Asset Type</label>
+                            <div>
+                                <input type="text" data-ng-model="assetTypeCode" id="assetTypeCode" placeholder="" required>
+                            </div>
+                        </div>-->
+            <div>
+                <label for="activityTypeCode">Activity Type</label>
+                <div>
+                    <input type="text" data-ng-model="budget.activityTypeCode" id="activityTypeCode" placeholder="" required ng-disabled="true">
+                </div>
+            </div>
+            <div>
+                <label for="property">Asset</label>
+                <div>
+                    <input type="text" data-ng-model="budget.asset.assetDetails.property.propertyName" id="property" ng-disabled="true">
+                </div>
+            </div>
+            <div>
+                <label for="effectiveDate">Effective Date</label>
+                <div>
+                    <input type="text" data-ng-model="budget.activityDetails.financial.effectiveDate | date:'MM/dd/yyyy'" id="effectiveDate" placeholder="" required>
+                </div>
+            </div>
+            <div class="line_item_list">
+                <ul>
+                    <li data-ng-repeat="budgetStatement in budget.activityDetails.financial.statements" class="line_item">
+                        <div class="line_item_list">
+                            <small class="list_item">Begin Date</small>
+                            <div>
+                                <input type="text" data-ng-model="budgetStatement.statementDateBegin | date:'MM/dd/yyyy'" class="list_item">
+                            </div>
+                            <small class="list_item">End Date</small>
+                            <div>
+                                <input type="text" data-ng-model="budgetStatement.statementDateEnd | date:'MM/dd/yyyy'" class="list_item">
+                            </div>
+                            <small class="list_item">Statement Type</small>
+                            <div>
+                                <input type="text" data-ng-model="budgetStatement.statementTypeCode" class="list_item">
+                            </div>
+                        </div>
+                        <div class="line_item_list">
+                            <small class="list_item">Line Items</small>
+                            <ul>
+                                <li data-ng-repeat="budgetLineItem in budgetStatement.statementLineItems" class="line_item">
+                                    <div>
+                                        <small data-ng-bind="budgetLineItem.lineItemCode" class="list_item"></small>
+                                    </div>
+                                    <div>
+                                        <input type="text" data-ng-model="budgetLineItem.lineItemAmount" class="list_item">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <input type="submit">
+            </div>
+            <div data-ng-show="error">
+                <strong data-ng-bind="error"></strong>
+            </div>
+        </form>
+    </div>
+</div>

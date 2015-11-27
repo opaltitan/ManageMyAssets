@@ -8,7 +8,7 @@
     <!--<section ng-view></section>-->
     <div ui-view="home"></div>
     <div ui-view="header"></div>
-    <div ui-view="asset"></div>
+    <div ui-view="list"></div>
     <script type="text/javascript">
       window.user = <%- user %>;
     </script>
@@ -19,6 +19,7 @@
     <script type="text/javascript" src="/lib/angular-resource/angular-resource.js"></script>
     <script type="text/javascript" src="/lib/angular-animate/angular-animate.js"></script>
     <script type="text/javascript" src="/lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="/lib/d3/d3.js"></script>
 
     <script type="text/javascript" src="/home/home.client.module.js"></script>
     <script type="text/javascript" src="/home/controllers/home.client.controller.js"></script>
@@ -30,22 +31,33 @@
     <script type="text/javascript" src="/header/header.client.module.js"></script>
     <script type="text/javascript" src="/header/controllers/header.client.controller.js"></script>
 
-    <script type="text/javascript" src="/asset/property.client.module.js"></script>
-    <script type="text/javascript" src="/asset/services/property.client.service.js"></script>
+    <script type="text/javascript" src="/asset/asset.client.module.js"></script>
+    <script type="text/javascript" src="/asset/services/asset.client.service.js"></script>
+
+    <!--<script type="text/javascript" src="/asset/property.client.module.js"></script>-->
+    <!--<script type="text/javascript" src="/asset/services/property.client.service.js"></script>-->
     <script type="text/javascript" src="/asset/controllers/property_list.client.controller.js"></script>
     <script type="text/javascript" src="/asset/controllers/property.client.controller.js"></script>
 
-    <script type="text/javascript" src="/asset/deal.client.module.js"></script>
-    <script type="text/javascript" src="/asset/services/deal.client.service.js"></script>
+    <!--<script type="text/javascript" src="/asset/deal.client.module.js"></script>-->
+    <!--<script type="text/javascript" src="/asset/services/deal.client.service.js"></script>-->
     <script type="text/javascript" src="/asset/controllers/deal_list.client.controller.js"></script>
     <script type="text/javascript" src="/asset/controllers/deal.client.controller.js"></script>
+
+    <!--<script type="text/javascript" src="/asset/controllers/asset.client.controller.js"></script>-->
+
+    <script type="text/javascript" src="/activity/activity.client.module.js"></script>
+    <script type="text/javascript" src="/activity/services/activity.client.service.js"></script>
+    <!--<script type="text/javascript" src="/activity/controllers/activity.client.controller.js"></script>-->
+    <script type="text/javascript" src="/activity/controllers/financial_list.client.controller.js"></script>
+    <script type="text/javascript" src="/activity/controllers/actuals.client.controller.js"></script>
+    <script type="text/javascript" src="/activity/controllers/budget.client.controller.js"></script>
+    <script type="text/javascript" src="/activity/controllers/forecast.client.controller.js"></script>
 
     <script type="text/javascript" src="/main.client.module.js"></script>
     <script type="text/javascript" src="/main.client.routes.js"></script>
 
-    <script type="text/javascript" src="/asset/asset.client.module.js"></script>
-    <script type="text/javascript" src="/asset/services/asset.client.service.js"></script>
-    <script type="text/javascript" src="/asset/controllers/asset.client.controller.js"></script>
+    <!--<script type="text/javascript" src="/activity/activity.client.module.js"></script>-->
 
     <script type="text/javascript" src="/application.js"></script>
 

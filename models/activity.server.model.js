@@ -5,7 +5,9 @@ var mongoose = require('mongoose'),
     schema = mongoose.Schema,
     User = mongoose.model('User'),
     Artifact = mongoose.model('Artifact'),
-    Asset = mongoose.model('Asset');
+    Asset = mongoose.model('Asset'),
+    //Statement = mongoose.model('Statement'),
+    deepPopulate = require('mongoose-deep-populate')(mongoose);
 
 var ApprovalSchema = new schema ({
     approvalTypeCode: {
@@ -35,6 +37,42 @@ var ApprovalSchema = new schema ({
         ref: 'User'
     }
 });
+/*
+var LineItemSchema = new schema({
+    lineItemCode: {
+        type: String,
+        trim: true,
+        required: 'Chart of Account code required.',
+        enum: ['GRPT','PPLE','INTE','NOIT','FCPCLDRET','VCNY']
+    },
+    lineItemAmount: {
+        type: Number,
+        required: 'Line Item Amount required.'
+    }
+});
+*/
+/*
+var StatementSchema = new schema({
+    statementTypeCode: {
+        type: String,
+        trim: true,
+        enum: ['Acquisition Month','Actuals','Budget','Projected']
+    },
+    statementDateBegin: {
+        type: Date,
+        required: 'Must enter Statement Begin Date'
+    },
+    statementDateEnd: {
+        type: Date,
+        required: 'Must enter Statement End Date'
+    },
+    statementLineItems: [LineItemSchema]
+});
+*/
+
+/*var FinancialSchema = new schema ({
+    statements: [Statement]
+});*/
 
 var ActivitySchema = new schema ({
     activityTypeCode: {
@@ -42,6 +80,41 @@ var ActivitySchema = new schema ({
         trim: true,
         required: 'Activity Type is required.',
         enum: ['Actuals','Budget','Forecast']
+    },
+    activityDetails: {
+        financial: {
+            effectiveDate: {
+                type: Date,
+                required: 'Must enter Effective Date'
+            },
+            statements: [{
+                statementTypeCode: {
+                    type: String,
+                    trim: true,
+                    enum: ['Acquisition Month', 'Actuals', 'Budget', 'Projected']
+                },
+                statementDateBegin: {
+                    type: Date,
+                    required: 'Must enter Statement Begin Date'
+                },
+                statementDateEnd: {
+                    type: Date,
+                    required: 'Must enter Statement End Date'
+                },
+                statementLineItems: [{
+                    lineItemCode: {
+                        type: String,
+                        trim: true,
+                        required: 'Chart of Account code required.',
+                        enum: ['GRPT', 'PPLE', 'INTE', 'NOIT', 'FCPCLDRET', 'VCNY']
+                    },
+                    lineItemAmount: {
+                        type: Number,
+                        required: 'Line Item Amount required.'
+                    }
+                }]
+            }]
+        }
     },
     artifact: {
         type: schema.ObjectId,
@@ -70,5 +143,7 @@ var ActivitySchema = new schema ({
 });
 
 ActivitySchema.set('toJson', {getters: true, virtuals: true });
+
+ActivitySchema.plugin(deepPopulate, {});
 
 mongoose.model('Activity', ActivitySchema);

@@ -2,29 +2,35 @@
  * Created by Justin on 8/22/2015.
  */
 angular.module('asset')
-    .factory('Assets_Select', ['$resource', function($resource){
-        return $resource('api/assets/property/:assetId', {
-            assetId: '@_id'
-        }, {
+    .factory('Property_Select', ['$resource', function($resource){
+        return $resource('api/assets/property/:artifactId', {}, {
             update: {
-                method: 'PUT'
+                method: 'PUT', params: { artifactId: '@artifact._id' }
             }
         });
     }])
-//    .factory('Assets_Update', ['$resource', function($resource){
-//        return $resource('api/assets/property/create', {
-//
-//        })
-//    }])
-    .factory('Property_Update', ['$resource', function($resource){
-        return $resource('api/assets/property/create', {
+    .factory('Deal_Select', ['$resource', function($resource){
+        return $resource('api/assets/deal/:artifactId', {
+        }, {
+            update: {
+                method: 'PUT', params: { artifactId: '@artifact._id' }
+            }
+        });
+    }])
+    .factory('Artifacts_Update', ['$resource', function($resource){
+        return $resource('api/artifacts', {
 
-        })
+        });
+    }])
+    .factory('Assets_Update', ['$resource', function($resource){
+        return $resource('api/assets', {
+
+        });
     }])
     .service('Socket', ['Authentication', '$location', '$timeout',
         function(Authentication, $location, $timeout){
             if(Authentication.user){
-                this.socket = io('/asset');
+                this.socket = io();
             } else {
                 $location.path('/');
             }
