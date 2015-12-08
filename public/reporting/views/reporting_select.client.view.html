@@ -1,0 +1,45 @@
+<div data-ng-controller="ReportingController" data-ng-init="openCreate()">
+    <div class="asset_create" ng-if="subArtifactTypeCode=='Report' && artifactId=='0'">
+        <h1>View Report</h1>
+        <my-scatter-chart data="actuals" class="chart"></my-scatter-chart>
+        <div class="line_item_list">
+            <ul>
+                <li data-ng-repeat="actual in actuals" class="'line_item">
+                    <div class="line_item_list">
+                        <ul>
+                            <li data-ng-repeat="actualsStatement in actual.activityDetails.financial.statements" class="line_item">
+                                <div class="line_item_list">
+                                    <small class="list_item">Begin Date</small>
+                                    <div>
+                                        <input type="text" data-ng-model="actualsStatement.statementDateBegin" class="list_item">
+                                    </div>
+                                    <small class="list_item">End Date</small>
+                                    <div>
+                                        <input type="text" data-ng-model="actualsStatement.statementDateEnd" class="list_item">
+                                    </div>
+                                    <small class="list_item">Statement Type</small>
+                                    <div>
+                                        <input type="text" data-ng-model="actualsStatement.statementTypeCode" class="list_item">
+                                    </div>
+                                </div>
+                                <div class="line_item_list">
+                                    <small class="list_item">Line Items</small>
+                                    <ul>
+                                        <li data-ng-repeat="actualsLineItem in actualsStatement.statementLineItems" class="line_item">
+                                            <div>
+                                                <small data-ng-bind="actualsLineItem.lineItemCode" class="list_item"></small>
+                                            </div>
+                                            <div>
+                                                <input type="text" data-ng-model="actualsLineItem.lineItemAmount" class="list_item">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -39,6 +39,10 @@ angular.module('main').config(['$stateProvider', '$urlRouterProvider',
                         templateUrl: 'activity/views/financial/financial_list.client.view.html',
                         controller: 'FinancialListController'
                     },
+                    'reporting': {
+                        templateUrl: 'reporting/views/reporting_list.client.view.html',
+                        controller: 'ReportingListController'
+                    },
                     'details': {
                         templateUrl: 'main_details.client.view.html'
                     }
@@ -86,6 +90,10 @@ angular.module('main').config(['$stateProvider', '$urlRouterProvider',
                     'activity_financials_forecast_create': {
                         templateUrl: 'activity/views/financial/forecast/forecast_create.client.view.html',
                         controller: 'ForecastController'
+                    },
+                    'reporting_details': {
+                        templateUrl: 'reporting/views/reporting_select.client.view.html',
+                        controller: 'ReportingController'
                     }
                 }
             })

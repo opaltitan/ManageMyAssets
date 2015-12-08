@@ -47,6 +47,7 @@ module.exports = function(server, io, mongoStore){
             console.log('connected in actuals_list');
             console.log(message.artifact_id);
             io.emit('actuals_list', message);
+            io.emit('reporting_actuals', message);
         });
 
         socket.on('budget_list', function(message) {
@@ -58,6 +59,13 @@ module.exports = function(server, io, mongoStore){
             console.log('connected in forecast_list');
             io.emit('forecast_list', message);
         });
+
+        /*
+        socket.on('reporting_actuals', function(message) {
+            console.log('connected in reporting_actuals');
+            io.emit('reporting_actuals', message);
+        });
+        */
 
         socket.on('disconnect', function(){
             console.log('disconnected');

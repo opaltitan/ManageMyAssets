@@ -1,0 +1,11 @@
+<div data-ng-controller="ReportingListController" data-ng-init="openList()">
+    <div ng-if="artifactTypeCode=='report'">
+        <h1>Reports</h1>
+        <a ui-sref="app.list.details({ subArtifactTypeCode: 'Report', artifactId: '0' })">New Report</a>
+        <div class="asset_list_sub">
+            <ul>
+                <li><a ui-sref="app.list.details({ subArtifactTypeCode: 'Report', artifactId: '0' })">View Report</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
