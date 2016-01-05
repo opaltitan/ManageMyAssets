@@ -11,24 +11,6 @@ angular.module('activity')
             }
         });
     }])
-/*    .factory('Budget_Select', ['$resource', function($resource){
-        return $resource('api/activities/budget/:artifactId', {
-            artifactId: '@activity.artifact._id'
-        }, {
-            update: {
-                method: 'PUT'
-            }
-        });
-    }])
-    .factory('Forecast_Select', ['$resource', function($resource){
-        return $resource('api/activities/forecast/:artifactId', {
-            artifactId: '@activity.artifact._id'
-        }, {
-            update: {
-                method: 'PUT'
-            }
-        });
-    }])*/
     .factory('Artifacts_Update', ['$resource', function($resource){
         return $resource('api/artifacts', {
 

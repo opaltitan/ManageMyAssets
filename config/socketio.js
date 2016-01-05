@@ -10,6 +10,7 @@ var config = require('./config'),
     passport = require('passport');
 
 module.exports = function(server, io, mongoStore){
+    // Using the session cookies, verify that the user is authenticated
     io.use(function(socket, next){
         cookieParser(config.sessionSecret)(socket.request, {}, function(err){
             var sessionId = socket.request.signedCookies['connect.sid'];
@@ -32,17 +33,22 @@ module.exports = function(server, io, mongoStore){
 
     io.sockets.on('connection', function(socket){
         console.log('connected');
-
+        // Used to push updates to the list of Properties
+        // If user updates a Property, message = the updated Property
+        // If user creates a Property, message = the created Property
         socket.on('properties_list', function(message){
             console.log('connected in properties_list');
             io.emit('properties_list', message);
         });
 
+        // Used to push updates to the list of Deals
         socket.on('deals_list', function(message) {
             console.log('connected in deals_list');
             io.emit('deals_list', message);
         });
 
+        // Used to push updates to the list of Actuals
+        // Also pushes updates to the Reporting module.
         socket.on('actuals_list', function(message) {
             console.log('connected in actuals_list');
             console.log(message.artifact_id);
@@ -50,22 +56,17 @@ module.exports = function(server, io, mongoStore){
             io.emit('reporting_actuals', message);
         });
 
+        // Used to push updates to the list of Budgets
         socket.on('budget_list', function(message) {
             console.log('connected in budget_list');
             io.emit('budget_list', message);
         });
 
+        // Used to push updates to the list of Forecasts
         socket.on('forecast_list', function(message) {
             console.log('connected in forecast_list');
             io.emit('forecast_list', message);
         });
-
-        /*
-        socket.on('reporting_actuals', function(message) {
-            console.log('connected in reporting_actuals');
-            io.emit('reporting_actuals', message);
-        });
-        */
 
         socket.on('disconnect', function(){
             console.log('disconnected');

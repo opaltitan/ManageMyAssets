@@ -7,6 +7,8 @@ var mongoose = require('mongoose'),
     Artifact = mongoose.model('Artifact'),
     deepPopulate = require('mongoose-deep-populate')(mongoose);
 
+
+// Property schema (not used)
 var PropertySchema = new schema ({
     propertyTypeCode: {
         type: String,
@@ -42,6 +44,7 @@ var PropertySchema = new schema ({
     }
 });
 
+// Deal schema (not used)
 var DealSchema = new schema ({
     dealTypeCode: {
         type: String,
@@ -62,6 +65,7 @@ var DealSchema = new schema ({
     }]
 });
 
+// Data model for assets
 var AssetSchema = new schema ({
     assetTypeCode: {
         type: String,
@@ -69,11 +73,14 @@ var AssetSchema = new schema ({
         required: 'Asset Type is required.',
         enum: ['Property','Deal']
     },
+    // DbRef to 'artifact'.
+    // Every activity needs to be tied to an artifact.
     artifact: {
         type: schema.ObjectId,
         ref: 'Artifact'
     },
     assetDetails: {
+        // Property-level fields.
         property: {
             propertyTypeCode: {
                 type: String,
@@ -108,6 +115,7 @@ var AssetSchema = new schema ({
                 trim: true
             }
         },
+        // Deal-level fields
         deal: {
             dealTypeCode: {
                 type: String,
@@ -120,6 +128,7 @@ var AssetSchema = new schema ({
                 //required: 'Deal Name is required.',
                 trim: true
             },
+            // Deals can have multiple properties tied to them
             properties: [{
                 asset: {
                     type: schema.ObjectId,
@@ -147,6 +156,7 @@ var AssetSchema = new schema ({
 
 AssetSchema.set('toJson', {getters: true, virtuals: true });
 
+// Allows use of the 'deepPopulate' plugin, which can query through ObjectIDs simply and easily.
 AssetSchema.plugin(deepPopulate, {});
 
 mongoose.model('Asset', AssetSchema);

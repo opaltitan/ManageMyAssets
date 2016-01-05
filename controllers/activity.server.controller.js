@@ -24,50 +24,41 @@ var getErrorMessage = function(err){
     return message;
 };
 
-
+// Creates a new activity
 exports.create = function(req, res, next){
-    var activity = new Activity(req.body);
-    activity.artifact = req.body.artifact;
-    //activity.asset = mongoose.Types.ObjectId(req.body.activity.asset._id);
-    activity.asset = mongoose.Types.ObjectId(req.body.asset);
-    activity.createdUser = req.user;
 
-    activity.save(function(err){
-        if(err) {
-            console.log(err.toString());
-            console.log(getErrorMessage(err));
-            return res.status(400).send({
-                message: getErrorMessage(err),
-                activity: activity
-            });
-        } else {
-            //res.json(asset);
-            res.json(activity);
-            //req.body.activity = activity;
-            //req.activity = activity;
-            //next();
-        }
-    });
-};
-/*
-exports.list = function(req, res) {
+    try {
 
-    Activity.find()
-        .sort('-created')
-        .populate('createdUser', 'firstName lastName')
-        //.populate('asset')
-        .exec(function(err, activities){
+        var activity = new Activity(req.body);
+        activity.artifact = req.body.artifact;
+
+        activity.asset = mongoose.Types.ObjectId(req.body.asset);
+        activity.createdUser = req.user;
+
+        activity.save(function(err){
             if(err) {
+                console.log(err.toString());
+                console.log(getErrorMessage(err));
                 return res.status(400).send({
-                    message: getErrorMessage(err)
+                    message: getErrorMessage(err),
+                    activity: activity
                 });
             } else {
-                res.json(activities);
+                res.json(activity);
             }
         });
-};
-*/
 
+    } catch(e){
+        console.log('error occurred here.');
+        return res.status(400).send({
+            message: 'An error occurred when saving'
+        });
+    }
+
+};
+
+// Outputs all possible line item enumerations
+// This is used to populate an array with every line item enumeration that exists, and prepopulates the amount with zero.
 exports.financialLineItemEnums = function(req, res, next){
     var lineItemEnums = LineItem.schema.path('lineItemCode').enumValues;
     var lineItems = new Array();
@@ -88,10 +79,13 @@ exports.financialLineItemEnums = function(req, res, next){
     //res.json(req.lineItems);
 };
 
+// Responds with the above line items as JSON
 exports.readLineItems = function(req, res){
     res.json(req.lineItems);
 };
 
+// Loops through each statement and verifies that every single line item type is in each statement.
+// If one isn't in a statement, it is pushed into that statement with lineItemAmount = 0.
 exports.populateEmptyLineItems = function(req, res, next){
     var lineItems = req.lineItems;
     var statements = req.activity.activityDetails.financial.statements;
@@ -117,7 +111,7 @@ exports.populateEmptyLineItems = function(req, res, next){
 
 };
 
-
+// Finds the activity record tied to the specified artifact.
 exports.activityById = function(req, res, next) {
     var qArtifact = req.artifact;
 
@@ -137,10 +131,12 @@ exports.activityById = function(req, res, next) {
         });
 };
 
+// Responds with the activity in JSON form
 exports.read = function(req, res){
     res.json(req.activity);
 };
 
+// Updates the activity record and responds with the updated activity data in JSON form
 exports.update = function(req, res) {
     var activity = req.activity;
     activity.activityDetails = req.body.activityDetails;
@@ -156,6 +152,7 @@ exports.update = function(req, res) {
     });
 };
 
+// Deletes the specified activity record.
 exports.delete = function(req, res){
     var activity = req.activity;
     activity.remove(function(err){
@@ -169,14 +166,16 @@ exports.delete = function(req, res){
     });
 };
 
+// Validates that the save is possible (comparing it to the model).
 exports.validateSave = function(req, res, next) {
+
     var activity = new Activity(req.body);
     //activity.artifact = req.body.activity.artifact;
     activity.asset = mongoose.Types.ObjectId(req.body.asset._id);
     activity.createdUser = req.user;
 
-    activity.validate(function(err){
-        if(err){
+    activity.validate(function (err) {
+        if (err) {
             return res.status(400).send({
                 message: getErrorMessage(err)
             });
@@ -186,6 +185,7 @@ exports.validateSave = function(req, res, next) {
     });
 };
 
+// Returns a list of all actuals (in JSON form)
 exports.listActuals = function(req, res, next) {
     Activity.find()
         .sort('-created')
@@ -205,6 +205,7 @@ exports.listActuals = function(req, res, next) {
         });
 };
 
+// Returns a list of all budgets (in JSON form)
 exports.listBudgets = function(req, res, next) {
     Activity.find()
         .sort('-created')
@@ -224,6 +225,7 @@ exports.listBudgets = function(req, res, next) {
         });
 };
 
+// Returns a list of all forecasts (in JSON form)
 exports.listForecasts = function(req, res, next) {
     Activity.find()
         .sort('-created')

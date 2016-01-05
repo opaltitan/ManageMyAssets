@@ -22,7 +22,7 @@ var getErrorMessage = function(err){
     return message;
 };
 
-
+// Creates an artifact record for an asset.
 exports.createAsset = function(req, res, next){
     var artifact = new Artifact(req.body.artifact);
     artifact.createdUser = req.user;
@@ -41,6 +41,7 @@ exports.createAsset = function(req, res, next){
     });
 };
 
+// Creates an artifact record for an activity.
 exports.createActivity = function(req, res, next){
     var artifact = new Artifact(req.body.artifact);
     artifact.createdUser = req.user;
@@ -58,6 +59,7 @@ exports.createActivity = function(req, res, next){
     });
 };
 
+// Responds with a list of all artifacts.
 exports.list = function(req, res) {
 
     Artifact.find()
@@ -74,6 +76,8 @@ exports.list = function(req, res) {
         });
 };
 
+// Finds the artifact record for the passed id and sets req.artifact equal to the record.
+// This is used by the asset and activity procedures to find the associated asset and activity records.
 exports.artifactById = function(req, res, next, id) {
     console.log('Artifact Id: ' + id);
     Artifact.findById(id)
@@ -87,6 +91,7 @@ exports.artifactById = function(req, res, next, id) {
         });
 };
 
+// Updates the artifact record (never called).
 exports.update = function(req, res) {
     var artifact = req.artifact;
     artifact.save(function(err){
@@ -100,6 +105,7 @@ exports.update = function(req, res) {
     });
 };
 
+// Deletes the artifact record (never used)
 exports.delete = function(req, res){
     var artifact = req.artifact;
     artifact.remove(function(err){
@@ -113,6 +119,7 @@ exports.delete = function(req, res){
     });
 };
 
+// Validates that the artifact can be saved for an asset.
 exports.validateSaveAsset = function(req, res, next) {
     console.log('req.body.artifact.artifactTypeCode ' + req.body.artifact.artifactTypeCode);
     console.log('req.body.artifact.subArtifactTypeCode' + req.body.artifact.subArtifactTypeCode);
@@ -134,6 +141,7 @@ exports.validateSaveAsset = function(req, res, next) {
     });
 };
 
+// Validates that the artifact can be saved for an activity.
 exports.validateSaveActivity = function(req, res, next) {
     var artifact = new Artifact(req.body.artifact);
     console.log('artifact_beforeValidate ' + artifact.artifactTypeCode);

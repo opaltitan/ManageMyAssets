@@ -1,25 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e90fc2d6-9951-46d7-b789-e3e16855d22c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/reporting/controllers/reporting.client.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/reporting/controllers/reporting_list.client.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/reporting/directives/reporting_chart.client.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/reporting/reporting.client.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/reporting/services/reporting.client.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/reporting/views/reporting_list.client.view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/reporting/views/reporting_select.client.view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/socketio.js" afterPath="$PROJECT_DIR$/config/socketio.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/artifact.server.model.js" afterPath="$PROJECT_DIR$/models/artifact.server.model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/activity/views/financial/actuals/actuals_select.client.view.html" afterPath="$PROJECT_DIR$/public/activity/views/financial/actuals/actuals_select.client.view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/application.js" afterPath="$PROJECT_DIR$/public/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/header/views/header.client.view.html" afterPath="$PROJECT_DIR$/public/header/views/header.client.view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/main.client.routes.js" afterPath="$PROJECT_DIR$/public/main.client.routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/main_details.client.view.html" afterPath="$PROJECT_DIR$/public/main_details.client.view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/main_list.client.view.html" afterPath="$PROJECT_DIR$/public/main_list.client.view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.styl" afterPath="$PROJECT_DIR$/public/stylesheets/style.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.ejs" afterPath="$PROJECT_DIR$/views/index.ejs" />
+    <list default="true" id="e90fc2d6-9951-46d7-b789-e3e16855d22c" name="Default" comment="Renamed node project (and directory). Added several testing frameworks and test files for Node. Added initial configuration file for Angular tests.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Property_System1/config/env/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Property_System1/karma.conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Property_System1/tests/activity.server.controller.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Property_System1/tests/activity.server.model.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Property_System1/tests/asset.server.model.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Property_System1/tests/deal.server.controller.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Property_System1/tests/property.server.controller.tests.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../Property_System1/.idea/AMS_1.iml" afterPath="$PROJECT_DIR$/../Property_System1/.idea/Property_System1.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular/angular.min.js.gzip" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular/angular.min.js.gzip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/.idea/.name" afterPath="$PROJECT_DIR$/../Property_System1/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/../Property_System1/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/.idea/libraries/AMS_1_node_modules.xml" afterPath="$PROJECT_DIR$/../Property_System1/.idea/libraries/AMS_1_node_modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/.idea/misc.xml" afterPath="$PROJECT_DIR$/../Property_System1/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/.idea/modules.xml" afterPath="$PROJECT_DIR$/../Property_System1/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/.idea/runConfigurations/bin_www.xml" afterPath="$PROJECT_DIR$/../Property_System1/.idea/runConfigurations/bin_www.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../Property_System1/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Property_System1/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/app.js" afterPath="$PROJECT_DIR$/../Property_System1/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/bin/www" afterPath="$PROJECT_DIR$/../Property_System1/bin/www" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/bower.json" afterPath="$PROJECT_DIR$/../Property_System1/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/config/env/development.js" afterPath="$PROJECT_DIR$/../Property_System1/config/env/development.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/config/mongoose.js" afterPath="$PROJECT_DIR$/../Property_System1/config/mongoose.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/config/socketio.js" afterPath="$PROJECT_DIR$/../Property_System1/config/socketio.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/controllers/activity.server.controller.js" afterPath="$PROJECT_DIR$/../Property_System1/controllers/activity.server.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/controllers/artifact.server.controller.js" afterPath="$PROJECT_DIR$/../Property_System1/controllers/artifact.server.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/controllers/asset.server.controller.js" afterPath="$PROJECT_DIR$/../Property_System1/controllers/asset.server.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/models/activity.server.model.js" afterPath="$PROJECT_DIR$/../Property_System1/models/activity.server.model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/models/artifact.server.model.js" afterPath="$PROJECT_DIR$/../Property_System1/models/artifact.server.model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/models/asset.server.model.js" afterPath="$PROJECT_DIR$/../Property_System1/models/asset.server.model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/package.json" afterPath="$PROJECT_DIR$/../Property_System1/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/activity/controllers/activity.client.controller.js" afterPath="$PROJECT_DIR$/../Property_System1/public/activity/controllers/activity.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/activity/controllers/actuals.client.controller.js" afterPath="$PROJECT_DIR$/../Property_System1/public/activity/controllers/actuals.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/activity/controllers/budget.client.controller.js" afterPath="$PROJECT_DIR$/../Property_System1/public/activity/controllers/budget.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/activity/controllers/financial_list.client.controller.js" afterPath="$PROJECT_DIR$/../Property_System1/public/activity/controllers/financial_list.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/activity/controllers/forecast.client.controller.js" afterPath="$PROJECT_DIR$/../Property_System1/public/activity/controllers/forecast.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/activity/services/activity.client.service.js" afterPath="$PROJECT_DIR$/../Property_System1/public/activity/services/activity.client.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/activity/views/financial/actuals/actuals_create.client.view.html" afterPath="$PROJECT_DIR$/../Property_System1/public/activity/views/financial/actuals/actuals_create.client.view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/activity/views/financial/financial_list.client.view.html" afterPath="$PROJECT_DIR$/../Property_System1/public/activity/views/financial/financial_list.client.view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/asset/controllers/deal.client.controller.js" afterPath="$PROJECT_DIR$/../Property_System1/public/asset/controllers/deal.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/asset/controllers/deal_list.client.controller.js" afterPath="$PROJECT_DIR$/../Property_System1/public/asset/controllers/deal_list.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/asset/controllers/property.client.controller.js" afterPath="$PROJECT_DIR$/../Property_System1/public/asset/controllers/property.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/asset/controllers/property_list.client.controller.js" afterPath="$PROJECT_DIR$/../Property_System1/public/asset/controllers/property_list.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular-animate/.bower.json" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular-animate/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular-animate/angular-animate.js" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular-animate/angular-animate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular-animate/angular-animate.min.js" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular-animate/angular-animate.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular-animate/bower.json" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular-animate/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular-animate/package.json" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular-animate/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular-resource/.bower.json" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular-resource/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular-resource/README.md" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular-resource/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular-resource/angular-resource.js" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular-resource/angular-resource.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular-resource/angular-resource.min.js" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular-resource/angular-resource.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular-resource/bower.json" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular-resource/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular-resource/package.json" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular-resource/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular-route/.bower.json" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular-route/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular-route/README.md" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular-route/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular-route/angular-route.js" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular-route/angular-route.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular-route/angular-route.min.js" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular-route/angular-route.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular-route/bower.json" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular-route/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular-route/package.json" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular-route/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular/.bower.json" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular/angular.js" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular/angular.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular/angular.min.js" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular/angular.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular/angular.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular/bower.json" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/lib/angular/package.json" afterPath="$PROJECT_DIR$/../Property_System1/public/lib/angular/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/main.client.routes.js" afterPath="$PROJECT_DIR$/../Property_System1/public/main.client.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/main.client.view.html" afterPath="$PROJECT_DIR$/../Property_System1/public/main.client.view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/main_details.client.view.html" afterPath="$PROJECT_DIR$/../Property_System1/public/main_details.client.view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/main_list.client.view.html" afterPath="$PROJECT_DIR$/../Property_System1/public/main_list.client.view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/reporting/controllers/reporting.client.controller.js" afterPath="$PROJECT_DIR$/../Property_System1/public/reporting/controllers/reporting.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/public/reporting/directives/reporting_chart.client.directive.js" afterPath="$PROJECT_DIR$/../Property_System1/public/reporting/directives/reporting_chart.client.directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/routes/activity.server.routes.js" afterPath="$PROJECT_DIR$/../Property_System1/routes/activity.server.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/routes/asset.server.routes.js" afterPath="$PROJECT_DIR$/../Property_System1/routes/asset.server.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Property_System1/views/index.ejs" afterPath="$PROJECT_DIR$/../Property_System1/views/index.ejs" />
     </list>
     <ignored path="AMS_1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,77 +96,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="reporting_list.client.view.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/reporting/views/reporting_list.client.view.html">
+      <file leaf-file-name="karma.conf.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../Property_System1/karma.conf.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.230769">
-              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reporting_select.client.view.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/reporting/views/reporting_select.client.view.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="60" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reporting_chart.client.directive.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/reporting/directives/reporting_chart.client.directive.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60901165">
-              <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.49088147">
+              <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
               <folding>
-                <element signature="e#0#43#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="deal.server.socketio.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/socketio/deal.server.socketio.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="socketio.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/socketio.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.styl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/style.styl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="215" column="16" selection-start-line="215" selection-start-column="16" selection-end-line="215" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reporting.client.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/reporting/controllers/reporting.client.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
-              <folding>
-                <element signature="e#0#43#0" expanded="false" />
+                <element signature="e#0#41#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -129,77 +121,81 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../Property_System1" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/asset/services/property.client.service.js" />
-        <option value="$PROJECT_DIR$/public/asset/controllers/property.client.controller.js" />
-        <option value="$PROJECT_DIR$/public/asset/property.client.module.js" />
-        <option value="$PROJECT_DIR$/public/asset/deal.client.module.js" />
-        <option value="$PROJECT_DIR$/routes/property.server.routes.js" />
-        <option value="$PROJECT_DIR$/public/asset/views/property/property_list.client.view.html" />
-        <option value="$PROJECT_DIR$/public/asset/views/deal/deal_list.client.view.html" />
-        <option value="$PROJECT_DIR$/public/asset/services/deal.client.service.js" />
-        <option value="$PROJECT_DIR$/public/asset/services/asset.client.service.js" />
-        <option value="$PROJECT_DIR$/public/asset/views/deal/deal_select.client.view.html" />
-        <option value="$PROJECT_DIR$/models/asset.server.model.js" />
-        <option value="$PROJECT_DIR$/public/asset/controllers/deal_list.client.controller.js" />
-        <option value="$PROJECT_DIR$/public/asset/controllers/deal.client.controller.js" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/routes/financial.server.routes.js" />
-        <option value="$PROJECT_DIR$/public/activity/controllers/financial_list.client.controller.js" />
-        <option value="$PROJECT_DIR$/routes/asset.server.routes.js" />
-        <option value="$PROJECT_DIR$/controllers/artifact.server.controller.js" />
-        <option value="$PROJECT_DIR$/public/activity/services/activity.client.service.js" />
-        <option value="$PROJECT_DIR$/routes/activity.server.routes.js" />
-        <option value="$PROJECT_DIR$/models/activities/line_item.server.model.js" />
-        <option value="$PROJECT_DIR$/config/mongoose.js" />
-        <option value="$PROJECT_DIR$/models/activity.server.model.js" />
-        <option value="$PROJECT_DIR$/public/activity/controllers/actuals.client.controller.js" />
-        <option value="$PROJECT_DIR$/public/activity/views/financial/actuals/actuals_create.client.view.html" />
-        <option value="$PROJECT_DIR$/public/activity/views/financial/budget/budget_create.client.view.html" />
-        <option value="$PROJECT_DIR$/public/activity/controllers/budget.client.controller.js" />
-        <option value="$PROJECT_DIR$/public/activity/views/financial/budget/budget_select.client.view.html" />
-        <option value="$PROJECT_DIR$/public/activity/views/financial/financial_list.client.view.html" />
-        <option value="$PROJECT_DIR$/public/activity/views/financial/forecast/forecast_create.client.view.html" />
-        <option value="$PROJECT_DIR$/public/activity/controllers/forecast.client.controller.js" />
-        <option value="$PROJECT_DIR$/public/activity/views/financial/forecast/forecast_select.client.view.html" />
-        <option value="$PROJECT_DIR$/bower.json" />
-        <option value="$PROJECT_DIR$/public/main.client.routes.js" />
-        <option value="$PROJECT_DIR$/public/main_list.client.view.html" />
-        <option value="$PROJECT_DIR$/public/main_details.client.view.html" />
-        <option value="$PROJECT_DIR$/public/application.js" />
-        <option value="$PROJECT_DIR$/models/artifact.server.model.js" />
-        <option value="$PROJECT_DIR$/public/header/views/header.client.view.html" />
         <option value="$PROJECT_DIR$/public/reporting/views/reporting_list.client.view.html" />
         <option value="$PROJECT_DIR$/public/reporting/controllers/reporting_list.client.controller.js" />
-        <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/public/reporting/reporting.client.module.js" />
         <option value="$PROJECT_DIR$/public/reporting/services/reporting.client.service.js" />
-        <option value="$PROJECT_DIR$/controllers/activity.server.controller.js" />
         <option value="$PROJECT_DIR$/public/activity/views/financial/actuals/actuals_select.client.view.html" />
         <option value="$PROJECT_DIR$/public/reporting/views/reporting_select.client.view.html" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.styl" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/views/index.ejs" />
+        <option value="$PROJECT_DIR$/config/mongoose.js" />
         <option value="$PROJECT_DIR$/config/socketio.js" />
+        <option value="$PROJECT_DIR$/controllers/artifact.server.controller.js" />
+        <option value="$PROJECT_DIR$/models/activity.server.model.js" />
+        <option value="$PROJECT_DIR$/models/artifact.server.model.js" />
+        <option value="$PROJECT_DIR$/models/asset.server.model.js" />
+        <option value="$PROJECT_DIR$/routes/activity.server.routes.js" />
+        <option value="$PROJECT_DIR$/routes/asset.server.routes.js" />
+        <option value="$PROJECT_DIR$/public/main.client.routes.js" />
+        <option value="$PROJECT_DIR$/public/main.client.view.html" />
+        <option value="$PROJECT_DIR$/public/main_list.client.view.html" />
+        <option value="$PROJECT_DIR$/public/main_details.client.view.html" />
+        <option value="$PROJECT_DIR$/public/activity/activity.client.module.js" />
+        <option value="$PROJECT_DIR$/public/activity/controllers/activity.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/activity/controllers/actuals.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/activity/controllers/budget.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/activity/controllers/forecast.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/activity/services/activity.client.service.js" />
+        <option value="$PROJECT_DIR$/public/activity/views/financial/financial_list.client.view.html" />
+        <option value="$PROJECT_DIR$/public/activity/views/financial/actuals/actuals_create.client.view.html" />
+        <option value="$PROJECT_DIR$/public/activity/controllers/financial_list.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/asset/controllers/deal_list.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/asset/controllers/property_list.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/asset/controllers/deal.client.controller.js" />
+        <option value="$PROJECT_DIR$/public/asset/controllers/property.client.controller.js" />
         <option value="$PROJECT_DIR$/public/reporting/controllers/reporting.client.controller.js" />
         <option value="$PROJECT_DIR$/public/reporting/directives/reporting_chart.client.directive.js" />
+        <option value="$PROJECT_DIR$/controllers/activity.server.controller.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/config/env/development.js" />
+        <option value="$PROJECT_DIR$/config/env/test.js" />
+        <option value="$PROJECT_DIR$/controllers/asset.server.controller.js" />
+        <option value="$PROJECT_DIR$/tests/activity.server.model.tests.js" />
+        <option value="$PROJECT_DIR$/tests/asset.server.model.tests.js" />
+        <option value="$PROJECT_DIR$/tests/asset.server.controller.tests.js" />
+        <option value="$PROJECT_DIR$/tests/property.server.controller.tests.js" />
+        <option value="$PROJECT_DIR$/tests/deal.server.controller.tests.js" />
+        <option value="$PROJECT_DIR$/tests/activity.server.controller.tests.js" />
+        <option value="$PROJECT_DIR$/bin/www" />
+        <option value="$PROJECT_DIR$/../Property_System1/config/karma.conf.js" />
+        <option value="$PROJECT_DIR$/../Property_System1/karma.conf.js" />
       </list>
     </option>
   </component>
+  <component name="JsBowerSettings">
+    <exe-path>D:\nodeJS\bower.cmd</exe-path>
+    <config-path />
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" />
   <component name="JsBuildToolPackageJson" detection-done="true">
-    <package-json value="$PROJECT_DIR$/package.json" />
+    <package-json value="$PROJECT_DIR$/../Property_System1/package.json" />
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="227" />
-    <option name="y" value="1" />
-    <option name="width" value="1656" />
-    <option name="height" value="1040" />
+    <option name="x" value="663" />
+    <option name="y" value="13" />
+    <option name="width" value="1209" />
+    <option name="height" value="1003" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -226,60 +222,45 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
+              <option name="myItemId" value="Property_System1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
+              <option name="myItemId" value="Property_System1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
+              <option name="myItemId" value="Property_System1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
+              <option name="myItemId" value="Property_System1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
+              <option name="myItemId" value="Property_System1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
+              <option name="myItemId" value="Property_System1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="socketio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
+              <option name="myItemId" value="Property_System1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -289,135 +270,25 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
+              <option name="myItemId" value="Property_System1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
+              <option name="myItemId" value="Property_System1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
+              <option name="myItemId" value="Property_System1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="users" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="users" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="style.styl" />
-              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reporting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reporting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reporting" />
+              <option name="myItemId" value="Property_System1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -427,65 +298,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
+              <option name="myItemId" value="Property_System1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AMS_1" />
+              <option name="myItemId" value="Property_System1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -496,6 +313,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -511,22 +329,20 @@
     <property name="js-jscs-nodeInterpreter" value="D:\nodeJS\node.exe" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\MEAN Projects\AMS_1\public\asset\controllers" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\MEAN Projects\Property_System1" />
       <recent name="D:\MEAN Projects\AMS_1\public\asset\views\property" />
       <recent name="D:\MEAN Projects\AMS_1\public\asset\views" />
       <recent name="D:\MEAN Projects\AMS_1\public\asset\views\deal" />
       <recent name="D:\MEAN Projects\AMS_1\socketio" />
-      <recent name="D:\MEAN Projects\AMS_1\models\activities" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MEAN Projects\AMS_1\tests" />
+      <recent name="D:\MEAN Projects\AMS_1\public\asset\controllers" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.bin\www">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <method />
-    </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
@@ -617,7 +433,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448620398001</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added Reporting module (D3 chart) that automatically updates data. Next step is to add comments, error handling, and unit testing.">
+      <created>1449546453611</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1449546453611</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -630,27 +452,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="227" y="1" width="1656" height="1040" extended-state="0" />
+    <frame x="663" y="13" width="1209" height="1003" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1946848" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23313408" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.49760193" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21145375" sideWeight="0.3961681" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988507" sideWeight="0.4970111" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21149425" sideWeight="0.41076005" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873562" sideWeight="0.4944492" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.49754602" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21145375" sideWeight="0.6038319" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21149425" sideWeight="0.58923995" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21913236" sideWeight="0.5799197" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22547914" sideWeight="0.5676856" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39537445" sideWeight="0.48092744" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912844" sideWeight="0.4978094" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -671,7 +493,9 @@
     <MESSAGE value="Now able to create and update Properties. Asset list has been modified to only display properties. Next step is to display a &quot;saved&quot; message after clicking save." />
     <MESSAGE value="Rather than completely re-populating the Asset screens when a property/deal record is modified or created, only the updated/created asset record is &quot;re-pushed&quot; to the item list and updated. Easier for users. Next step is the Activities section." />
     <MESSAGE value="Modified the data model to allow for easier querying of property/deal specific information for assets and financials information for activities. Also added the &quot;DeepPopulate&quot; plugin for Mongoose to greatly simplify deep querying. Next step is the Reporting module." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified the data model to allow for easier querying of property/deal specific information for assets and financials information for activities. Also added the &quot;DeepPopulate&quot; plugin for Mongoose to greatly simplify deep querying. Next step is the Reporting module." />
+    <MESSAGE value="Added Reporting module (D3 chart) that automatically updates data. Next step is to add comments, error handling, and unit testing." />
+    <MESSAGE value="Renamed node project (and directory). Added several testing frameworks and test files for Node. Added initial configuration file for Angular tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed node project (and directory). Added several testing frameworks and test files for Node. Added initial configuration file for Angular tests." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -680,373 +504,415 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/controllers/artifact.server.controller.js">
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4164265">
+          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/main.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27994013">
+          <caret line="11" column="81" selection-start-line="11" selection-start-column="81" selection-end-line="11" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/main_details.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+          <caret line="0" column="67" selection-start-line="0" selection-start-column="67" selection-end-line="0" selection-end-column="67" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/asset/views/property/property_select.client.view.html">
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/main_list.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.27994013">
+          <caret line="11" column="94" selection-start-line="11" selection-start-column="94" selection-end-line="11" selection-end-column="94" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/users/services/authentication.client.service.js">
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/main.client.routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1506647">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.19164266">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/activities/financial.server.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mongoose-deep-populate/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mongoose-deep-populate/lib/plugin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5555553">
-          <caret line="174" column="0" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/activity/activity.client.module.js">
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/main.client.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/activities/statement.server.model.js">
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/reporting/reporting.client.module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12555392">
-          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/activities/line_item.server.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/asset.server.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="125" column="32" selection-start-line="125" selection-start-column="32" selection-end-line="125" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/activity.server.routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="75" selection-start-line="25" selection-start-column="75" selection-end-line="25" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/mongoose.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3264402">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/asset/controllers/property.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.92466766">
-          <caret line="43" column="50" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/assets/property.server.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/activity/views/financial/actuals/actuals_create.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.730769">
-          <caret line="27" column="70" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34052387">
-          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/activity/views/financial/forecast/forecast_select.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.026234567">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/activity/views/financial/budget/budget_select.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.026234567">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/activity/views/financial/budget/budget_create.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.026234567">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/activity/views/financial/forecast/forecast_create.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.026234567">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/activity/controllers/forecast.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.025222551">
-          <caret line="23" column="74" selection-start-line="23" selection-start-column="74" selection-end-line="23" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/main.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/asset/asset.client.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/asset/services/asset.client.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.050445102">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/activity/services/activity.client.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="51" selection-start-line="71" selection-start-column="51" selection-end-line="71" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/artifact.server.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/main_details.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/main_list.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6153846">
-          <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/main.client.routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="58" selection-start-line="85" selection-start-column="58" selection-end-line="85" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/header/views/header.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/activity/views/financial/financial_list.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="75" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/reporting/views/reporting_list.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/activity.server.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="81" selection-start-line="93" selection-start-column="81" selection-end-line="93" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/reporting/controllers/reporting_list.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.275">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7448166">
-          <caret line="60" column="108" selection-start-line="60" selection-start-column="108" selection-end-line="60" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/reporting/reporting.client.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.075">
+        <state vertical-scroll-proportion="0.07348703">
           <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/reporting/services/reporting.client.service.js">
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/activity/activity.client.module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.475">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.048991356">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/activity/views/financial/actuals/actuals_select.client.view.html">
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/activity/controllers/activity.client.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6238532">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.19596542">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/reporting/views/reporting_select.client.view.html">
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/activity/controllers/forecast.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.3025937">
+          <caret line="94" column="58" selection-start-line="94" selection-start-column="58" selection-end-line="94" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/activity/controllers/budget.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73054755">
+          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="91" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/activity/services/activity.client.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6613833">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/activity/views/activity_list.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="60" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/activity/views/activity_details.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/activity/views/financial/financial_list.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5419162">
+          <caret line="38" column="49" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/activity/views/financial/actuals/actuals_create.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0688623">
+          <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/asset/asset.client.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07348703">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/asset/controllers/deal_list.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58357346">
+          <caret line="44" column="16" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/activity/controllers/financial_list.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.685879">
+          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/activity/controllers/actuals.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="91" column="101" selection-start-line="90" selection-start-column="0" selection-end-line="91" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/asset/controllers/deal.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="101" selection-start-line="69" selection-start-column="0" selection-end-line="70" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/reporting/controllers/reporting_list.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24495678">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/asset/controllers/property_list.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/reporting/directives/reporting_chart.client.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3429395">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/reporting/controllers/reporting.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7060519">
+          <caret line="39" column="53" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/asset/controllers/property.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.024495678">
+          <caret line="27" column="120" selection-start-line="26" selection-start-column="0" selection-end-line="27" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/config/env/development.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41274658">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/controllers/asset.server.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="91" column="20" selection-start-line="91" selection-start-column="20" selection-end-line="91" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/controllers/users.server.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/models/artifact.server.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7589286">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/models/user.server.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="27" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/models/activity.server.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.575">
-          <caret line="65" column="58" selection-start-line="65" selection-start-column="58" selection-end-line="65" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/activity/controllers/actuals.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35">
-          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/activity/controllers/budget.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.675">
-          <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/activity.server.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.65">
-          <caret line="196" column="45" selection-start-line="196" selection-start-column="45" selection-end-line="196" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.styl">
+    <entry file="file://$PROJECT_DIR$/../Property_System1/controllers/activity.server.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="215" column="16" selection-start-line="215" selection-start-column="16" selection-end-line="215" selection-end-column="16" />
+          <caret line="101" column="17" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/socketio/deal.server.socketio.js">
+    <entry file="file://$PROJECT_DIR$/../Property_System1/tests/asset.server.model.tests.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/socketio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/activity/controllers/financial_list.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29651162">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="39" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/reporting/controllers/reporting.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="133" selection-end-column="11" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/reporting/directives/reporting_chart.client.directive.js">
+    <entry file="file://$PROJECT_DIR$/../Property_System1/routes/asset.server.routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60901165">
-          <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="47" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/models/assets/deal.server.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4412214">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/models/asset.server.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/tests/deal.server.controller.tests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38931298">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/routes/deal.server.routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23358779">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/tests/property.server.controller.tests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.025954198">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/tests/activity.server.model.tests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="72" column="19" selection-start-line="46" selection-start-column="0" selection-end-line="72" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/routes/activity.server.routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="42" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/tests/activity.server.controller.tests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5152439">
+          <caret line="84" column="11" selection-start-line="84" selection-start-column="11" selection-end-line="84" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/config/env/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1554878">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24460432">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/.bowerrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.76981133">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41698113">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/public/lib/angular-route/angular-route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24144144">
+          <caret line="304" column="16" selection-start-line="304" selection-start-column="16" selection-end-line="304" selection-end-column="16" />
+          <folding>
+            <marker date="1450735976094" expanded="true" signature="10636:11383" placeholder="..." />
+            <marker date="1450735976094" expanded="true" signature="11923:12076" placeholder="{...}" />
+            <marker date="1450735976094" expanded="true" signature="12158:12267" placeholder="{...}" />
+            <marker date="1450735976094" expanded="true" signature="12352:12464" placeholder="{...}" />
+            <marker date="1450735976094" expanded="true" signature="12536:13294" placeholder="{...}" />
+            <marker date="1450735976094" expanded="true" signature="12715:12985" placeholder="{...}" />
+            <marker date="1450735976094" expanded="true" signature="12814:12968" placeholder="{...}" />
+            <marker date="1450735976094" expanded="true" signature="13452:14039" placeholder="{...}" />
+            <marker date="1450735976094" expanded="true" signature="24749:25547" placeholder="..." />
+            <marker date="1450735976094" expanded="true" signature="25074:25144" placeholder="..." />
+            <marker date="1450735976094" expanded="true" signature="25606:25711" placeholder="..." />
+            <marker date="1450735976094" expanded="true" signature="25773:25935" placeholder="..." />
+            <marker date="1450735976094" expanded="true" signature="26019:26234" placeholder="{...}" />
+            <marker date="1450735976094" expanded="true" signature="26258:26293" placeholder="{...}" />
+            <marker date="1450735976094" expanded="true" signature="26350:26728" placeholder="{...}" />
+            <marker date="1450735976094" expanded="true" signature="26761:26793" placeholder="{...}" />
+            <marker date="1450735976094" expanded="true" signature="26841:26870" placeholder="{...}" />
+            <marker date="1450735976094" expanded="true" signature="26918:26951" placeholder="{...}" />
+            <marker date="1450735976094" expanded="true" signature="27081:27664" placeholder="[...]" />
+            <marker date="1450735976094" expanded="true" signature="27177:27663" placeholder="{...}" />
+            <marker date="1450735976094" expanded="true" signature="27247:27391" placeholder="{&quot;templateUrl&quot;: 'book.html'...}" />
+            <marker date="1450735976094" expanded="true" signature="27446:27599" placeholder="{&quot;templateUrl&quot;: 'chapter.html'...}" />
+            <marker date="1450735976094" expanded="true" signature="27700:27934" placeholder="[...]" />
+            <marker date="1450735976094" expanded="true" signature="27794:27933" placeholder="{...}" />
+            <marker date="1450735976094" expanded="true" signature="27970:28100" placeholder="[...]" />
+            <marker date="1450735976094" expanded="true" signature="28010:28099" placeholder="{...}" />
+            <marker date="1450735976094" expanded="true" signature="28139:28272" placeholder="[...]" />
+            <marker date="1450735976094" expanded="true" signature="28179:28271" placeholder="{...}" />
+            <marker date="1450735976094" expanded="true" signature="28409:28942" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Property_System1/karma.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49088147">
+          <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>

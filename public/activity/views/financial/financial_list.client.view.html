@@ -2,14 +2,7 @@
     <div ng-if="artifactTypeCode=='activities'">
         <h1>Actuals</h1>
         <a ui-sref="app.list.details({ subArtifactTypeCode: 'Actuals', artifactId: '0' })">New Actuals</a>
-        <!--<div class="asset_list_sub">
-            <label for="searchActuals.propertyName">Property Name</label>
-            <input type="text" id="searchActuals.propertyName" ng-model="searchActuals.propertyName" />
-        </div>
-        <div class="asset_list_sub">
-            <label for="searchActuals.propertyTypeCode">Property Type</label>
-            <input type="text" id="searchActuals.propertyTypeCode" ng-model="searchActuals.propertyTypeCode"/>
-        </div>-->
+        <!-- List of all 'actuals' activities -->
         <div data-ng-init="findActuals()" class="asset_list_sub">
             <ul>
                 <li data-ng-repeat="actual in actuals | filter : searchActuals" data-ng-click="togglePropertyActuals.item = $index; togglePropertyBudget.item = -1; togglePropertyForecast.item=-1;" data-ng-class="{'active' : togglePropertyActuals.item == $index}" class="assets">
@@ -18,24 +11,15 @@
                             <small data-ng-bind="actual.asset.assetDetails.property.propertyName" class="list_item"></small>
                             <small data-ng-bind="actual.activityDetails.financial.effectiveDate | date:'MM/dd/yyyy'" class="list_item"></small>
                             <small data-ng-bind="actual.activityTypeCode" class="list_item"></small>
-                            <!--<small data-ng-bind="property.asset._id" class="list_item"></small>-->
-                            <!--                   <small data-ng-bind="property.created"></small>-->
                         </div>
                     </a>
                 </li>
             </ul>
         </div>
+
         <h1>Budgets</h1>
         <a ui-sref="app.list.details({ subArtifactTypeCode: 'Budget', artifactId: '0' })">New Budget</a>
-        <!--<a ui-sref="app.activity.list.create({ activityTypeCode: 'Forecast' })">New Property</a>-->
-        <!--<div class="asset_list_sub">
-            <label for="searchActuals.propertyName">Property Name</label>
-            <input type="text" id="searchActuals.propertyName" ng-model="searchActuals.propertyName" />
-        </div>
-        <div class="asset_list_sub">
-            <label for="searchActuals.propertyTypeCode">Property Type</label>
-            <input type="text" id="searchActuals.propertyTypeCode" ng-model="searchActuals.propertyTypeCode"/>
-        </div>-->
+        <!-- List of all 'budget' activities -->
         <div data-ng-init="findBudgets()" class="asset_list_sub">
             <ul>
                 <li data-ng-repeat="budget in budgets | filter : searchBudgets" data-ng-click="togglePropertyBudget.item = $index; togglePropertyActuals.item=-1;togglePropertyForecast.item=-1;" data-ng-class="{'active' : togglePropertyBudget.item == $index}" class="assets">
@@ -44,24 +28,15 @@
                             <small data-ng-bind="budget.asset.assetDetails.property.propertyName" class="list_item"></small>
                             <small data-ng-bind="budget.activityDetails.financial.effectiveDate | date:'MM/dd/yyyy'" class="list_item"></small>
                             <small data-ng-bind="budget.activityTypeCode" class="list_item"></small>
-                            <!--<small data-ng-bind="property.asset._id" class="list_item"></small>-->
-                            <!--                   <small data-ng-bind="property.created"></small>-->
                         </div>
                     </a>
                 </li>
             </ul>
         </div>
+
         <h1>Forecasts</h1>
         <a ui-sref="app.list.details({ subArtifactTypeCode: 'Forecast', artifactId: '0' })">New Forecast</a>
-        <!--<a ui-sref="app.activity.list.create({ activityTypeCode: 'Forecast' })">New Property</a>-->
-        <!--<div class="asset_list_sub">
-            <label for="searchActuals.propertyName">Property Name</label>
-            <input type="text" id="searchActuals.propertyName" ng-model="searchActuals.propertyName" />
-        </div>
-        <div class="asset_list_sub">
-            <label for="searchActuals.propertyTypeCode">Property Type</label>
-            <input type="text" id="searchActuals.propertyTypeCode" ng-model="searchActuals.propertyTypeCode"/>
-        </div>-->
+        <!-- List of all 'forecast' activites -->
         <div data-ng-init="findForecasts()" class="asset_list_sub">
             <ul>
                 <li data-ng-repeat="forecast in forecasts | filter : searchForecasts" data-ng-click="togglePropertyForecast.item = $index; togglePropertyBudget.item=-1; togglePropertyActuals.item=-1;" data-ng-class="{'active' : togglePropertyForecast.item == $index}" class="assets">
@@ -70,8 +45,6 @@
                             <small data-ng-bind="forecast.asset.assetDetails.property.propertyName" class="list_item"></small>
                             <small data-ng-bind="forecast.activityDetails.financial.effectiveDate | date:'MM/dd/yyyy'" class="list_item"></small>
                             <small data-ng-bind="forecast.activityTypeCode" class="list_item"></small>
-                            <!--<small data-ng-bind="property.asset._id" class="list_item"></small>-->
-                            <!--                   <small data-ng-bind="property.created"></small>-->
                         </div>
                     </a>
                 </li>

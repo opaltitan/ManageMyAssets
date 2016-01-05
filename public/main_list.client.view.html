@@ -1,10 +1,15 @@
 <div>
+    <!-- These are the UI-Routes for all related lists -->
     <div class="asset_list">
+        <!-- In a future version, asset_property and asset_deal will be consolidated into one -->
         <div ui-view="asset_property"></div>
         <div ui-view="asset_deal"></div>
+        <!-- The UI-Route for the activity lists -->
         <div ui-view="activity_financials"></div>
+        <!-- The UI-Route for the reporting lists -->
         <div ui-view="reporting"></div>
     </div>
+    <!-- This is the main UI-Route for the "details" part of the screen, next to the lists -->
     <div class="asset_create">
         <div ui-view="details"></div>
     </div>

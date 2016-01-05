@@ -5,6 +5,10 @@ var mongoose = require('mongoose'),
     schema = mongoose.Schema,
     User = mongoose.model('User');
 
+// The reason behind using an 'artifact' model is to easily add things to the data model that should be tied to both the asset and activity.
+// Example: users should have the ability to add general "comments" to an asset, an activity, or a report.
+// Another example: users should have the ability to attach files to any asset, activity, or report.
+
 var CommentSchema = new schema ({
     commentText: {
         type: String,

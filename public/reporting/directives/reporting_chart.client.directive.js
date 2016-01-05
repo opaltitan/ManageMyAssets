@@ -135,10 +135,6 @@ angular.module('reporting').directive('myScatterChart', ['d3',
                                 // Need to format the date properly for D3 to handle it
                                 x: new Date(qDate.getFullYear(), qDate.getMonth(), qDate.getDate()),
                                 max_y: max,
-                                //items: yItems
-                                // Need to figure out how to get D3 to project Line Item Amounts onto y axis
-                                //y: d.activityDetails.financial.statements.statementLineItems.lineItemAmount
-                                //y: 25
                                 y: yItems
                             }
                         });

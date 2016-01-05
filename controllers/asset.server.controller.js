@@ -23,7 +23,8 @@ var getErrorMessage = function(err){
     return message;
 };
 
-
+// Creates a new asset.
+// Uses the artifact id created in the previous step for the DbRef
 exports.create = function(req, res, next){
     var asset = new Asset(req.body);
     asset.artifact = req.body.artifact;
@@ -43,6 +44,7 @@ exports.create = function(req, res, next){
     });
 };
 
+// Responds with the list of all assets (never used).
 exports.list = function(req, res) {
 
     Asset.find()
@@ -59,6 +61,7 @@ exports.list = function(req, res) {
         });
 };
 
+// Responds with the list of all assets of type 'Property'
 exports.listProperties = function(req, res) {
     Asset.find()
         .sort('-created')
@@ -75,6 +78,7 @@ exports.listProperties = function(req, res) {
         });
 };
 
+// Responds with the list of all assets of type 'Deal'
 exports.listDeals = function(req, res) {
     Asset.find()
         .sort('-created')
@@ -91,10 +95,12 @@ exports.listDeals = function(req, res) {
         });
 };
 
+// Responds with the selected asset record.
 exports.read = function(req, res){
     res.json(req.asset);
 };
 
+// Finds the asset record using the artifact id
 exports.assetById = function(req, res, next) {
     var qArtifact = req.artifact;
 
@@ -111,6 +117,7 @@ exports.assetById = function(req, res, next) {
         });
 };
 
+// Updates the selected asset record.
 exports.update = function(req, res) {
     var asset = req.asset;
     asset.assetDetails = req.body.assetDetails;
@@ -135,6 +142,7 @@ exports.update = function(req, res) {
     });
 };
 
+// Deletes the selected asset record.
 exports.delete = function(req, res){
     var asset = req.asset;
     asset.remove(function(err){
@@ -148,6 +156,7 @@ exports.delete = function(req, res){
     });
 };
 
+// Validates that the asset data can be saved. (Old, not used anymore)
 exports.validateSaveAsset = function(req, res, next) {
     var asset = new Asset(req.body);
     asset.artifact = req.body.artifact;
@@ -164,6 +173,7 @@ exports.validateSaveAsset = function(req, res, next) {
     });
 };
 
+// Validates that...this isn't actually used anymore.
 exports.validateSaveActivity = function(req, res, next) {
     var asset = new Asset(req.body.activity.asset);
 

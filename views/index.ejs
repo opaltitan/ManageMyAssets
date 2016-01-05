@@ -5,66 +5,58 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <!--<section ng-view></section>-->
     <div ui-view="home"></div>
     <div ui-view="header"></div>
     <div ui-view="list"></div>
     <script type="text/javascript">
       window.user = <%- user %>;
     </script>
+    <!-- Add Socket.IO library -->
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
-
+    <!-- Add Angular and Angular-Animate -->
     <script type="text/javascript" src="/lib/angular/angular.js"></script>
     <script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
     <script type="text/javascript" src="/lib/angular-resource/angular-resource.js"></script>
     <script type="text/javascript" src="/lib/angular-animate/angular-animate.js"></script>
+    <!-- Add Angular UI Router -->
     <script type="text/javascript" src="/lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- Add the D3 library -->
     <script type="text/javascript" src="/lib/d3/d3.js"></script>
-
+    <!-- Add the home screen files -->
     <script type="text/javascript" src="/home/home.client.module.js"></script>
     <script type="text/javascript" src="/home/controllers/home.client.controller.js"></script>
-    <!--<script type="text/javascript" src="/home/config/home.client.routes.js"></script>-->
-
+    <!-- Add the user authentication files -->
     <script type="text/javascript" src="/users/users.client.module.js"></script>
     <script type="text/javascript" src="/users/services/authentication.client.service.js"></script>
-
+    <!-- Add the necessary javascript files for the Header at the top -->
     <script type="text/javascript" src="/header/header.client.module.js"></script>
     <script type="text/javascript" src="/header/controllers/header.client.controller.js"></script>
-
+    <!-- Add the module and service for the asset components -->
     <script type="text/javascript" src="/asset/asset.client.module.js"></script>
     <script type="text/javascript" src="/asset/services/asset.client.service.js"></script>
-
-    <!--<script type="text/javascript" src="/asset/property.client.module.js"></script>-->
-    <!--<script type="text/javascript" src="/asset/services/property.client.service.js"></script>-->
+    <!-- Add the references for the Property-specific controllers -->
     <script type="text/javascript" src="/asset/controllers/property_list.client.controller.js"></script>
     <script type="text/javascript" src="/asset/controllers/property.client.controller.js"></script>
-
-    <!--<script type="text/javascript" src="/asset/deal.client.module.js"></script>-->
-    <!--<script type="text/javascript" src="/asset/services/deal.client.service.js"></script>-->
+    <!-- Add the references for the Deal-specific controllers -->
     <script type="text/javascript" src="/asset/controllers/deal_list.client.controller.js"></script>
     <script type="text/javascript" src="/asset/controllers/deal.client.controller.js"></script>
-
-    <!--<script type="text/javascript" src="/asset/controllers/asset.client.controller.js"></script>-->
-
+    <!-- Add references for all activity files -->
     <script type="text/javascript" src="/activity/activity.client.module.js"></script>
     <script type="text/javascript" src="/activity/services/activity.client.service.js"></script>
-    <!--<script type="text/javascript" src="/activity/controllers/activity.client.controller.js"></script>-->
     <script type="text/javascript" src="/activity/controllers/financial_list.client.controller.js"></script>
     <script type="text/javascript" src="/activity/controllers/actuals.client.controller.js"></script>
     <script type="text/javascript" src="/activity/controllers/budget.client.controller.js"></script>
     <script type="text/javascript" src="/activity/controllers/forecast.client.controller.js"></script>
-
+    <!-- Add references for all things "Reporting" related -->
     <script type="text/javascript" src="/reporting/reporting.client.module.js"></script>
     <script type="text/javascript" src="/reporting/services/reporting.client.service.js"></script>
     <script type="text/javascript" src="/reporting/controllers/reporting_list.client.controller.js"></script>
     <script type="text/javascript" src="/reporting/controllers/reporting.client.controller.js"></script>
     <script type="text/javascript" src="/reporting/directives/reporting_chart.client.directive.js"></script>
-
+    <!-- Add the main module and primary UI router -->
     <script type="text/javascript" src="/main.client.module.js"></script>
     <script type="text/javascript" src="/main.client.routes.js"></script>
-
-    <!--<script type="text/javascript" src="/activity/activity.client.module.js"></script>-->
-
+    <!-- Add the central application.js file -->
     <script type="text/javascript" src="/application.js"></script>
 
   </body>
